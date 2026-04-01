@@ -44,9 +44,10 @@ public class PizzaDeliveryHandler : MonoBehaviour
 
     private void NewDeliveryPointWithDelay()
     {
+        //  immediately spawn point if all are disabled
         if (ActivePoints == 0)
         {
-            Debug.Log("No more points");
+            // Debug.Log("No more points");
             SpawnDeliveryPoint();
         }
         else

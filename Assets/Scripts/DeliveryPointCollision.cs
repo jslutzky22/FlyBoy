@@ -22,9 +22,25 @@ public class DeliveryPointCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //  not final calculation
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
+
         gameObject.SetActive(false);
-        PizzaDeliveryHandler.instance.IncreaseMoney(basePrice + timer);
+
+        //  not final calculation
+        float tipCalculation = basePrice + timer;
+        //  penalty can not go below base price
+        tipCalculation = Mathf.Max(basePrice,
+                                  (tipCalculation - PizzaQuality.instance.collisionNumber * PizzaQuality.instance.collisionPenalty));
+        //  rounding to nearest hundredth
+        tipCalculation = Mathf.Round(tipCalculation * 100)/100;
+
+        Debug.Log("Gained $"+tipCalculation);
+        PizzaDeliveryHandler.instance.IncreaseMoney(tipCalculation);
+
+        PizzaQuality.instance.collisionNumber = 0;
     }
 
     private IEnumerator CountDownTimer()
