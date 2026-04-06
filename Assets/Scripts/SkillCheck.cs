@@ -8,6 +8,7 @@ public class SkillCheck : MonoBehaviour
     [SerializeField] private GameObject successZone;
     public bool skillCheckActive;
     private bool hit;
+    private bool miss;
     public bool skillCheckHit;
 
     public void SkillCheckActivate()
@@ -16,19 +17,18 @@ public class SkillCheck : MonoBehaviour
         successZone.SetActive(true);
         skillCheckActive = true;
         successZone.transform.eulerAngles = new Vector4(successZone.transform.eulerAngles.x, successZone.transform.eulerAngles.y, 
-            Random.Range(0, 360), successZone.transform.rotation.w);
+            Random.Range(120, 300), successZone.transform.rotation.w);
+        hitIndicator.transform.eulerAngles = new Vector4(hitIndicator.transform.eulerAngles.x, hitIndicator.transform.eulerAngles.y, 0, hitIndicator.transform.rotation.w);
         StartCoroutine(SkillCheckSpin());
     }
 
     IEnumerator SkillCheckSpin()
     {
-        float timer = 10;
-        while (timer > 0 && !hit)
+        while (hitIndicator.transform.eulerAngles.z < successZone.transform.eulerAngles.z + 30  && !hit && !miss)
         {
-            timer -= Time.deltaTime;
             yield return null;
             hitIndicator.transform.eulerAngles = new Vector4(hitIndicator.transform.eulerAngles.x, hitIndicator.transform.eulerAngles.y,
-                hitIndicator.transform.eulerAngles.z + 1, hitIndicator.transform.rotation.w);
+                hitIndicator.transform.eulerAngles.z + 2, hitIndicator.transform.rotation.w);
         }
         if (hit)
         {
@@ -42,6 +42,7 @@ public class SkillCheck : MonoBehaviour
         {
             hitIndicator.SetActive(false);
             successZone.SetActive(false);
+            miss = false;
             skillCheckHit = false;
             skillCheckActive = false;
         }
@@ -49,11 +50,14 @@ public class SkillCheck : MonoBehaviour
 
     void OnClick()
     {
-        Debug.Log("click");
         if (hitIndicator.transform.eulerAngles.z > successZone.transform.eulerAngles.z - 26 && 
             hitIndicator.transform.eulerAngles.z < successZone.transform.eulerAngles.z + 26 && skillCheckActive)
         {
             hit = true;
+        }
+        else if (skillCheckActive)
+        {
+            miss = true;
         }
     }
 }

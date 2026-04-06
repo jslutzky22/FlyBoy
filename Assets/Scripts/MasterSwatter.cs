@@ -166,9 +166,9 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventOneObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventOneObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -178,9 +178,9 @@ public class MasterSwatter : MonoBehaviour
                 //insert a value here, i just don't know what to put yet
                 cityHealth -= 0;
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventOneObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventOneObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -191,9 +191,9 @@ public class MasterSwatter : MonoBehaviour
             //insert a value here, i just don't know what to put yet
             cityHealth -= 0;
             arrayLength = 0;
-            while (arrayLength < eventZeroObjects.Length)
+            while (arrayLength < eventOneObjects.Length)
             {
-                eventZeroObjects[arrayLength].SetActive(false);
+                eventOneObjects[arrayLength].SetActive(false);
                 arrayLength++;
             }
             eventActive = false;
@@ -226,9 +226,9 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventTwoObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventTwoObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -238,9 +238,9 @@ public class MasterSwatter : MonoBehaviour
                 //insert a value here, i just don't know what to put yet
                 cityHealth -= 0;
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventTwoObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventTwoObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -251,9 +251,9 @@ public class MasterSwatter : MonoBehaviour
             //insert a value here, i just don't know what to put yet
             cityHealth -= 0;
             arrayLength = 0;
-            while (arrayLength < eventZeroObjects.Length)
+            while (arrayLength < eventTwoObjects.Length)
             {
-                eventZeroObjects[arrayLength].SetActive(false);
+                eventTwoObjects[arrayLength].SetActive(false);
                 arrayLength++;
             }
             eventActive = false;
@@ -286,9 +286,9 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventThreeObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventThreeObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -298,9 +298,9 @@ public class MasterSwatter : MonoBehaviour
                 //insert a value here, i just don't know what to put yet
                 cityHealth -= 0;
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventThreeObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventThreeObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -311,9 +311,9 @@ public class MasterSwatter : MonoBehaviour
             //insert a value here, i just don't know what to put yet
             cityHealth -= 0;
             arrayLength = 0;
-            while (arrayLength < eventZeroObjects.Length)
+            while (arrayLength < eventThreeObjects.Length)
             {
-                eventZeroObjects[arrayLength].SetActive(false);
+                eventThreeObjects[arrayLength].SetActive(false);
                 arrayLength++;
             }
             eventActive = false;
@@ -346,9 +346,9 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventFourObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventFourObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -358,9 +358,9 @@ public class MasterSwatter : MonoBehaviour
                 //insert a value here, i just don't know what to put yet
                 cityHealth -= 0;
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventFourObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventFourObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -371,9 +371,9 @@ public class MasterSwatter : MonoBehaviour
             //insert a value here, i just don't know what to put yet
             cityHealth -= 0;
             arrayLength = 0;
-            while (arrayLength < eventZeroObjects.Length)
+            while (arrayLength < eventFourObjects.Length)
             {
-                eventZeroObjects[arrayLength].SetActive(false);
+                eventFourObjects[arrayLength].SetActive(false);
                 arrayLength++;
             }
             eventActive = false;
@@ -406,9 +406,9 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventFiveObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventFiveObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -418,9 +418,9 @@ public class MasterSwatter : MonoBehaviour
                 //insert a value here, i just don't know what to put yet
                 cityHealth -= 0;
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventFiveObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventFiveObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -431,9 +431,9 @@ public class MasterSwatter : MonoBehaviour
             //insert a value here, i just don't know what to put yet
             cityHealth -= 0;
             arrayLength = 0;
-            while (arrayLength < eventZeroObjects.Length)
+            while (arrayLength < eventFiveObjects.Length)
             {
-                eventZeroObjects[arrayLength].SetActive(false);
+                eventFiveObjects[arrayLength].SetActive(false);
                 arrayLength++;
             }
             eventActive = false;
@@ -466,9 +466,9 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventSixObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventSixObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -478,9 +478,9 @@ public class MasterSwatter : MonoBehaviour
                 //insert a value here, i just don't know what to put yet
                 cityHealth -= 0;
                 arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                while (arrayLength < eventSixObjects.Length)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
+                    eventSixObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
                 eventActive = false;
@@ -491,9 +491,9 @@ public class MasterSwatter : MonoBehaviour
             //insert a value here, i just don't know what to put yet
             cityHealth -= 0;
             arrayLength = 0;
-            while (arrayLength < eventZeroObjects.Length)
+            while (arrayLength < eventSixObjects.Length)
             {
-                eventZeroObjects[arrayLength].SetActive(false);
+                eventSixObjects[arrayLength].SetActive(false);
                 arrayLength++;
             }
             eventActive = false;
