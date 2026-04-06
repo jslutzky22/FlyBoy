@@ -4,14 +4,19 @@ using UnityEngine;
 public class FlyingController : MonoBehaviour
 {
     public float moveSpeed;
+    public float hyperSpeedMultiplier;
+    private bool hyperSpeeding;
     public float maxFloatHeight;
     public float minFloatHeight;
+    public float maxSpeed;
 
     public Camera playerCamera;
     public float currentHeight;
     private bool moving = false;
 
     private float xRotation;
+
+    private float velocity;
 
     private Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,7 +29,7 @@ public class FlyingController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         xRotation = playerCamera.transform.eulerAngles.x; 
 
@@ -40,6 +45,12 @@ public class FlyingController : MonoBehaviour
         rb.linearVelocity = rb.linearVelocity * .95f;
         currentHeight = Mathf.Clamp(transform.position.y, currentHeight, maxFloatHeight);
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+        velocity = rb.linearVelocity.magnitude;
+
+        if (rb.linearVelocity.magnitude > maxSpeed)
+        {
+            rb.maxLinearVelocity = maxSpeed;
+        }
     }
 
     private void MoveCharacter()
@@ -54,7 +65,14 @@ public class FlyingController : MonoBehaviour
         currentHeight += flyDirection.y * moveSpeed * Time.deltaTime;
         currentHeight = Mathf.Clamp(currentHeight, minFloatHeight, maxFloatHeight);
 
-        rb.AddForce(flyDirection * moveSpeed * Time.deltaTime * 500); 
+        if (hyperSpeeding)
+        {
+            rb.AddForce(flyDirection * moveSpeed * Time.deltaTime * 500 * hyperSpeedMultiplier);
+        }
+        else
+        {
+            rb.AddForce(flyDirection * moveSpeed * Time.deltaTime * 500);
+        }
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
     }
 
@@ -71,5 +89,20 @@ public class FlyingController : MonoBehaviour
     public void OnMovingStopped()
     {
         moving = false;
+    }
+
+    public void OnHyperSpeed()
+    {
+        hyperSpeeding = true;
+    }
+
+    public void OnHyperSpeedStop()
+    {
+        hyperSpeeding = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("Velocity: " + velocity);
     }
 }
