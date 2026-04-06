@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1561911698794662668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 6769460709723191774}
   - component: {fileID: 4904670261882864453}
   - component: {fileID: 3023547409756675568}
+  - component: {fileID: 6030149440697355941}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -139,6 +140,28 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6030149440697355941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910229994341096835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d467edd2762c2d4cab52dbcc5c7effa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MasterSwatter
+  swatterEventSystemTimer: 60
+  flyBoyMadeItToEvent: 0
+  eventZeroObjects: []
+  eventOneObjects: []
+  eventTwoObjects: []
+  eventThreeObjects: []
+  eventFourObjects: []
+  eventFiveObjects: []
+  eventSixObjects: []
+  eventWaitTimer: 30
 --- !u!1 &5428609300872220705
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +171,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3264641509420066979}
+  - component: {fileID: 6748711572648053268}
+  - component: {fileID: 1372159061859887749}
   m_Layer: 5
   m_Name: SkillCheck
   m_TagString: Untagged
@@ -176,6 +201,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6748711572648053268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428609300872220705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c73f44c2dce9344783a9a0c2439570f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillCheck
+  hitIndicator: {fileID: 5486972475780414770}
+  successZone: {fileID: 1625266592286609010}
+  skillCheckActive: 0
+  skillCheckHit: 0
+--- !u!114 &1372159061859887749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428609300872220705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &5486972475780414770
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7679303088905339810
 RectTransform:
   m_ObjectHideFlags: 0
