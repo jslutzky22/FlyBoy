@@ -19,6 +19,8 @@ public class FlyingController : MonoBehaviour
 
     private float velocity;
 
+    public Animator animator;
+
     private Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,6 +65,7 @@ public class FlyingController : MonoBehaviour
 
     private void MoveCharacter()
     {
+        animator.SetBool("FlyingAnimation", true);
         Vector3 cameraForward = new Vector3(playerCamera.transform.forward.x, 0, playerCamera.transform.forward.z);
         transform.rotation = Quaternion.LookRotation(cameraForward);
         transform.Rotate(new Vector3(xRotation, 0, zRotation), Space.Self);
@@ -82,6 +85,7 @@ public class FlyingController : MonoBehaviour
 
     private void DisableMovement()
     {
+        animator.SetBool("FlyingAnimation", false);
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
