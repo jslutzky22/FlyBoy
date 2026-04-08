@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillCheck : MonoBehaviour
 {
@@ -24,31 +25,29 @@ public class SkillCheck : MonoBehaviour
 
     IEnumerator SkillCheckSpin()
     {
-        while (hitIndicator.transform.eulerAngles.z < successZone.transform.eulerAngles.z + 30  && !hit && !miss)
+        while (!hit)
         {
             yield return null;
             hitIndicator.transform.eulerAngles = new Vector4(hitIndicator.transform.eulerAngles.x, hitIndicator.transform.eulerAngles.y,
                 hitIndicator.transform.eulerAngles.z + 2, hitIndicator.transform.rotation.w);
+            if (miss)
+            {
+                hitIndicator.GetComponentInChildren<Image>().color = Color.red;
+                successZone.GetComponentInChildren<Image>().color = Color.red;
+                yield return new WaitForSecondsRealtime(1f);
+                hitIndicator.GetComponentInChildren<Image>().color = Color.white;
+                successZone.GetComponentInChildren<Image>().color = Color.white;
+                miss = false;
+            }
         }
-        if (hit)
-        {
-            hitIndicator.SetActive(false);
-            successZone.SetActive(false);
-            hit = false;
-            skillCheckHit = true;
-            skillCheckActive = false;
-        }
-        else
-        {
-            hitIndicator.SetActive(false);
-            successZone.SetActive(false);
-            miss = false;
-            skillCheckHit = false;
-            skillCheckActive = false;
-        }
+        hitIndicator.SetActive(false);
+        successZone.SetActive(false);
+        hit = false;
+        skillCheckHit = true;
+        skillCheckActive = false;
     }
 
-    void OnClick()
+    public void OnClick()
     {
         if (hitIndicator.transform.eulerAngles.z > successZone.transform.eulerAngles.z - 26 && 
             hitIndicator.transform.eulerAngles.z < successZone.transform.eulerAngles.z + 26 && skillCheckActive)

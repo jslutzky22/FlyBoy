@@ -137,4 +137,9 @@ public class FlyingController : MonoBehaviour
         }
         playerCamera.fieldOfView = 40;
     }
+    
+    public void OnClick()
+    {
+        FindAnyObjectByType<SkillCheck>().OnClick();
+    }
 }

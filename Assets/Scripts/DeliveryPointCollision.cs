@@ -27,6 +27,8 @@ public class DeliveryPointCollision : MonoBehaviour
             return;
         }
 
+        PizzaDeliveryHandler.instance.NewDeliveryPointWithDelay();
+
         gameObject.SetActive(false);
 
         //  not final calculation
