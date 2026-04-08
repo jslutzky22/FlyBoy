@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 3023547409756675568}
   - component: {fileID: 6030149440697355941}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MasterSwatterCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,15 +153,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MasterSwatter
   swatterEventSystemTimer: 60
-  flyBoyMadeItToEvent: 0
-  eventZeroObjects: []
-  eventOneObjects: []
-  eventTwoObjects: []
-  eventThreeObjects: []
-  eventFourObjects: []
-  eventFiveObjects: []
-  eventSixObjects: []
+  eventZeroObjects:
+  - {fileID: 1167017827963351068, guid: b650cd9f7133e9b49836a2698e5bda57, type: 3}
+  eventOneObjects:
+  - {fileID: 548064917693820553, guid: 9d73087e5bbae08478360b45920b1d39, type: 3}
+  eventTwoObjects:
+  - {fileID: 3127271625109077765, guid: 71badc4bbf0a5ce4aa8cd0cce467cd0e, type: 3}
+  eventThreeObjects:
+  - {fileID: 3544953512045091657, guid: a5577688186bf2d42a489b6cd31c266e, type: 3}
+  eventFourObjects:
+  - {fileID: 4269942382120088794, guid: 3cb77c8b41f907045b654ad98a0f9a55, type: 3}
+  eventFiveObjects:
+  - {fileID: 9087043656058527110, guid: 1bd992fa5ce154c47b7f177a7ccdce8f, type: 3}
+  eventSixObjects:
+  - {fileID: 3984272083187461254, guid: f1655325dbb6fc24a87b4296c6ada7e2, type: 3}
   eventWaitTimer: 30
+  flyBoyMadeItToEvent0: 0
+  flyBoyMadeItToEvent1: 0
+  flyBoyMadeItToEvent2: 0
+  flyBoyMadeItToEvent3: 0
+  flyBoyMadeItToEvent4: 0
+  flyBoyMadeItToEvent5: 0
+  flyBoyMadeItToEvent6: 0
 --- !u!1 &5428609300872220705
 GameObject:
   m_ObjectHideFlags: 0

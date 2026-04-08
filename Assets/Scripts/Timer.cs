@@ -44,7 +44,9 @@ public class Timer : MonoBehaviour
             timeLimit.seconds = 59;
         }
 
-        timerText.text = timeLimit.minutes + ":" + (timeLimit.seconds < 10 ? "0" : "") + Mathf.Round(timeLimit.seconds);
+        int roundedSeconds = (int)Mathf.Round(timeLimit.seconds);
+
+        timerText.text = timeLimit.minutes + ":" + (roundedSeconds < 10 ? "0" : "") + roundedSeconds;
     }
 
     private void winCheck()
