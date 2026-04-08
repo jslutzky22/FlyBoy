@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 132359964518984979}
   - component: {fileID: 6828652794847350970}
   - component: {fileID: 9135688222280876848}
+  - component: {fileID: 3848921718261814721}
   m_Layer: 0
   m_Name: FlyBoy
   m_TagString: Player
@@ -794,6 +795,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PizzaQuality
   collisionPenalty: 2
   collisionNumber: 0
+--- !u!81 &3848921718261814721
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2657868629369960487}
+  m_Enabled: 1
 --- !u!1 &2960176293645449672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2029,7 @@ Transform:
   m_GameObject: {fileID: 8200120884754558396}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09687134, y: 0.26046082, z: -0.026275566, w: 0.96025294}
-  m_LocalPosition: {x: 44.207542, y: 6.2245893, z: -126.43468}
+  m_LocalPosition: {x: 23.334232, y: 6.2245893, z: -153.74579}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
