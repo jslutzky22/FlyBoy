@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -10,6 +11,7 @@ public class PizzaDeliveryHandler : MonoBehaviour
     private DeliveryPointCollision[] deliveryPoints;
     public int ActivePoints;
     [SerializeField] private Slider rentBar;
+    [SerializeField] private TMP_Text rentText;
 
     [SerializeField] private float minDeliveryDelay;
     [SerializeField] private float maxDeliveryDelay;
@@ -32,7 +34,16 @@ public class PizzaDeliveryHandler : MonoBehaviour
             Debug.LogWarning("Rent bar not set in inspector");
         }
 
-        deliveryPoints = GetComponentsInChildren<DeliveryPointCollision>(true);
+        if (rentText)
+        {
+            rentText.text = "$0.00/$" + Rent;
+        }
+        else
+        {
+            Debug.LogWarning("Rent bar not set in inspector");
+        }
+
+            deliveryPoints = GetComponentsInChildren<DeliveryPointCollision>(true);
 
         for (int i = 0; i < maxVisiblePoints - 1; i++)
         {
@@ -42,25 +53,33 @@ public class PizzaDeliveryHandler : MonoBehaviour
         NewDeliveryPointWithDelay();
     }
 
-    private void NewDeliveryPointWithDelay()
+    public void NewDeliveryPointWithDelay()
     {
-        //  immediately spawn point if all are disabled
+        //  spawn immediately when no active points
         if (ActivePoints == 0)
         {
-            // Debug.Log("No more points");
             SpawnDeliveryPoint();
         }
         else
         {
             StartCoroutine(SpawnDelay());
         }
+
     }
 
     //  for immediately spawning a delivery point
     private void SpawnDeliveryPoint()
     {
         int index = Random.Range(0, deliveryPoints.Length);
-        deliveryPoints[index].gameObject.SetActive(true);
+        if (!deliveryPoints[index].gameObject.activeSelf)
+        {
+            deliveryPoints[index].gameObject.SetActive(true);
+        }
+        else
+        {
+            //  repeat function if chosen point already active
+            SpawnDeliveryPoint();
+        }
     }
 
     private IEnumerator SpawnDelay()
@@ -78,10 +97,12 @@ public class PizzaDeliveryHandler : MonoBehaviour
 
         if (rentBar)
         {
-            rentBar.value = Money;
-        }
+            string moneyString = (Mathf.Round(Money*100)).ToString();
+            moneyString = moneyString.Substring(0, moneyString.Length - 2) + "." + moneyString.Substring(moneyString.Length - 2);
 
-        NewDeliveryPointWithDelay();
+            rentBar.value = Money;
+            rentText.text = "$" + moneyString + "/$" + Rent;
+        }
     }
 
     // Update is called once per frame
