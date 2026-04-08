@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -102,11 +103,13 @@ public class FlyingController : MonoBehaviour
     public void OnHyperSpeed()
     {
         hyperSpeeding = true;
+        StartCoroutine(ZoomOut());
     }
 
     public void OnHyperSpeedStop()
     {
         hyperSpeeding = false;
+        StartCoroutine(ZoomIn());
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -114,6 +117,27 @@ public class FlyingController : MonoBehaviour
         print("Velocity: " + velocity);
     }
 
+    public IEnumerator ZoomOut()
+    {
+        playerCamera.fieldOfView = 40;
+        for (int i = 0; i < 100; i++)
+        {
+            playerCamera.fieldOfView += .01f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        //playerCamera.fieldOfView = 50;
+    }
+
+    public IEnumerator ZoomIn()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            playerCamera.fieldOfView -= .01f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        playerCamera.fieldOfView = 40;
+    }
+    
     public void OnClick()
     {
         FindAnyObjectByType<SkillCheck>().OnClick();
