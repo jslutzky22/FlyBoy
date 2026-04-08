@@ -28,6 +28,7 @@ public class MasterSwatter : MonoBehaviour
     public bool flyBoyMadeItToEvent4;
     public bool flyBoyMadeItToEvent5;
     public bool flyBoyMadeItToEvent6;
+    [SerializeField] int eventLoss;
 
     void Start()
     {
@@ -84,11 +85,10 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventZero()
     {
-        int arrayLength = 0;
-        while (arrayLength < eventZeroObjects.Length)
-        {
-            eventZeroObjects[arrayLength].SetActive(true);
-            arrayLength++;
+        eventZeroObjects[0].SetActive(true);
+        if (eventZeroObjects[1] != null)
+        { 
+            eventZeroObjects[1].SetActive(false);
         }
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent0)
@@ -107,11 +107,10 @@ public class MasterSwatter : MonoBehaviour
             {
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
-                arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                eventZeroObjects[0].SetActive(false);
+                if (eventZeroObjects[1] != null)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventZeroObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent0 = false;
@@ -119,12 +118,11 @@ public class MasterSwatter : MonoBehaviour
             else 
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
-                arrayLength = 0;
-                while (arrayLength < eventZeroObjects.Length)
+                cityHealth -= eventLoss;
+                eventZeroObjects[0].SetActive(false);
+                if (eventZeroObjects[1] != null)
                 {
-                    eventZeroObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventZeroObjects[1].SetActive(true);
                 }
                 eventActive = false; 
                 flyBoyMadeItToEvent0 = false;
@@ -133,12 +131,11 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
-            arrayLength = 0;
-            while (arrayLength < eventZeroObjects.Length)
+            cityHealth -= eventLoss;
+            eventZeroObjects[0].SetActive(false);
+            if (eventZeroObjects[1] != null)
             {
-                eventZeroObjects[arrayLength].SetActive(false);
-                arrayLength++;
+                eventZeroObjects[1].SetActive(true);
             }
             eventActive = false;
             flyBoyMadeItToEvent0 = false;
@@ -147,11 +144,10 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventOne()
     {
-        int arrayLength = 0;
-        while (arrayLength < eventOneObjects.Length)
+        eventOneObjects[0].SetActive(true);
+        if (eventOneObjects[1] != null)
         {
-            eventOneObjects[arrayLength].SetActive(true);
-            arrayLength++;
+            eventOneObjects[1].SetActive(false);
         }
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent1)
@@ -170,11 +166,10 @@ public class MasterSwatter : MonoBehaviour
             {
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
-                arrayLength = 0;
-                while (arrayLength < eventOneObjects.Length)
+                eventOneObjects[0].SetActive(false);
+                if (eventOneObjects[1] != null)
                 {
-                    eventOneObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventOneObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent1 = false;
@@ -182,12 +177,11 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
-                arrayLength = 0;
-                while (arrayLength < eventOneObjects.Length)
+                cityHealth -= eventLoss;
+                eventOneObjects[0].SetActive(false);
+                if (eventOneObjects[1] != null)
                 {
-                    eventOneObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventOneObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent1 = false;
@@ -196,12 +190,11 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
-            arrayLength = 0;
-            while (arrayLength < eventOneObjects.Length)
+            cityHealth -= eventLoss;
+            eventOneObjects[0].SetActive(false);
+            if (eventOneObjects[1] != null)
             {
-                eventOneObjects[arrayLength].SetActive(false);
-                arrayLength++;
+                eventOneObjects[1].SetActive(true);
             }
             eventActive = false;
             flyBoyMadeItToEvent1 = false;
@@ -210,11 +203,10 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventTwo()
     {
-        int arrayLength = 0;
-        while (arrayLength < eventTwoObjects.Length)
+        eventTwoObjects[0].SetActive(true);
+        if (eventTwoObjects[1] != null)
         {
-            eventTwoObjects[arrayLength].SetActive(true);
-            arrayLength++;
+            eventTwoObjects[1].SetActive(false);
         }
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent2)
@@ -233,11 +225,10 @@ public class MasterSwatter : MonoBehaviour
             {
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
-                arrayLength = 0;
-                while (arrayLength < eventTwoObjects.Length)
+                eventTwoObjects[0].SetActive(false);
+                if (eventTwoObjects[1] != null)
                 {
-                    eventTwoObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventTwoObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent2 = false;
@@ -245,12 +236,11 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
-                arrayLength = 0;
-                while (arrayLength < eventTwoObjects.Length)
+                cityHealth -= eventLoss;
+                eventTwoObjects[0].SetActive(false);
+                if (eventTwoObjects[1] != null)
                 {
-                    eventTwoObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventTwoObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent2 = false;
@@ -259,12 +249,11 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
-            arrayLength = 0;
-            while (arrayLength < eventTwoObjects.Length)
+            cityHealth -= eventLoss;
+            eventTwoObjects[0].SetActive(false);
+            if (eventTwoObjects[1] != null)
             {
-                eventTwoObjects[arrayLength].SetActive(false);
-                arrayLength++;
+                eventTwoObjects[1].SetActive(true);
             }
             eventActive = false;
             flyBoyMadeItToEvent2 = false;
@@ -273,11 +262,10 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventThree()
     {
-        int arrayLength = 0;
-        while (arrayLength < eventThreeObjects.Length)
+        eventThreeObjects[0].SetActive(true);
+        if (eventThreeObjects[1] != null)
         {
-            eventThreeObjects[arrayLength].SetActive(true);
-            arrayLength++;
+            eventThreeObjects[1].SetActive(false);
         }
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent3)
@@ -296,11 +284,10 @@ public class MasterSwatter : MonoBehaviour
             {
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
-                arrayLength = 0;
-                while (arrayLength < eventThreeObjects.Length)
+                eventThreeObjects[0].SetActive(false);
+                if (eventThreeObjects[1] != null)
                 {
-                    eventThreeObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventThreeObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent3 = false;
@@ -308,12 +295,11 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
-                arrayLength = 0;
-                while (arrayLength < eventThreeObjects.Length)
+                cityHealth -= eventLoss;
+                eventThreeObjects[0].SetActive(false);
+                if (eventThreeObjects[1] != null)
                 {
-                    eventThreeObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventThreeObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent3 = false;
@@ -322,12 +308,11 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
-            arrayLength = 0;
-            while (arrayLength < eventThreeObjects.Length)
+            cityHealth -= eventLoss;
+            eventThreeObjects[0].SetActive(false);
+            if (eventThreeObjects[1] != null)
             {
-                eventThreeObjects[arrayLength].SetActive(false);
-                arrayLength++;
+                eventThreeObjects[1].SetActive(true);
             }
             eventActive = false;
             flyBoyMadeItToEvent3 = false;
@@ -336,11 +321,10 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventFour()
     {
-        int arrayLength = 0;
-        while (arrayLength < eventFourObjects.Length)
+        eventFourObjects[0].SetActive(true);
+        if (eventFourObjects[1] != null)
         {
-            eventFourObjects[arrayLength].SetActive(true);
-            arrayLength++;
+            eventFourObjects[1].SetActive(false);
         }
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent4)
@@ -359,11 +343,10 @@ public class MasterSwatter : MonoBehaviour
             {
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
-                arrayLength = 0;
-                while (arrayLength < eventFourObjects.Length)
+                eventFourObjects[0].SetActive(false);
+                if (eventFourObjects[1] != null)
                 {
-                    eventFourObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventFourObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent4 = false;
@@ -371,12 +354,11 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
-                arrayLength = 0;
-                while (arrayLength < eventFourObjects.Length)
+                cityHealth -= eventLoss;
+                eventFourObjects[0].SetActive(false);
+                if (eventFourObjects[1] != null)
                 {
-                    eventFourObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventFourObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent4 = false;
@@ -385,12 +367,11 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
-            arrayLength = 0;
-            while (arrayLength < eventFourObjects.Length)
+            cityHealth -= eventLoss;
+            eventFourObjects[0].SetActive(false);
+            if (eventFourObjects[1] != null)
             {
-                eventFourObjects[arrayLength].SetActive(false);
-                arrayLength++;
+                eventFourObjects[1].SetActive(true);
             }
             eventActive = false;
             flyBoyMadeItToEvent4 = false;
@@ -399,11 +380,10 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventFive()
     {
-        int arrayLength = 0;
-        while (arrayLength < eventFiveObjects.Length)
+        eventFiveObjects[0].SetActive(true);
+        if (eventFiveObjects[1] != null)
         {
-            eventFiveObjects[arrayLength].SetActive(true);
-            arrayLength++;
+            eventFiveObjects[1].SetActive(false);
         }
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent5)
@@ -422,11 +402,10 @@ public class MasterSwatter : MonoBehaviour
             {
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
-                arrayLength = 0;
-                while (arrayLength < eventFiveObjects.Length)
+                eventFiveObjects[0].SetActive(false);
+                if (eventFiveObjects[1] != null)
                 {
-                    eventFiveObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventFiveObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent5 = false;
@@ -434,12 +413,11 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
-                arrayLength = 0;
-                while (arrayLength < eventFiveObjects.Length)
+                cityHealth -= eventLoss;
+                eventFiveObjects[0].SetActive(false);
+                if (eventFiveObjects[1] != null)
                 {
-                    eventFiveObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventFiveObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent5 = false;
@@ -448,12 +426,11 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
-            arrayLength = 0;
-            while (arrayLength < eventFiveObjects.Length)
+            cityHealth -= eventLoss;
+            eventFiveObjects[0].SetActive(false);
+            if (eventFiveObjects[1] != null)
             {
-                eventFiveObjects[arrayLength].SetActive(false);
-                arrayLength++;
+                eventFiveObjects[1].SetActive(true);
             }
             eventActive = false;
             flyBoyMadeItToEvent5 = false;
@@ -462,11 +439,10 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventSix()
     {
-        int arrayLength = 0;
-        while (arrayLength < eventSixObjects.Length)
+        eventSixObjects[0].SetActive(true);
+        if (eventSixObjects[1] != null)
         {
-            eventSixObjects[arrayLength].SetActive(true);
-            arrayLength++;
+            eventSixObjects[1].SetActive(false);
         }
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent6)
@@ -485,11 +461,10 @@ public class MasterSwatter : MonoBehaviour
             {
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
-                arrayLength = 0;
-                while (arrayLength < eventSixObjects.Length)
+                eventSixObjects[0].SetActive(false);
+                if (eventSixObjects[1] != null)
                 {
-                    eventSixObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventSixObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent6 = false;
@@ -497,12 +472,11 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
-                arrayLength = 0;
-                while (arrayLength < eventSixObjects.Length)
+                cityHealth -= eventLoss;
+                eventSixObjects[0].SetActive(false);
+                if (eventSixObjects[1] != null)
                 {
-                    eventSixObjects[arrayLength].SetActive(false);
-                    arrayLength++;
+                    eventSixObjects[1].SetActive(true);
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent6 = false;
@@ -511,12 +485,11 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
-            arrayLength = 0;
-            while (arrayLength < eventSixObjects.Length)
+            cityHealth -= eventLoss;
+            eventSixObjects[0].SetActive(false);
+            if (eventSixObjects[1] != null)
             {
-                eventSixObjects[arrayLength].SetActive(false);
-                arrayLength++;
+                eventSixObjects[1].SetActive(true);
             }
             eventActive = false;
             flyBoyMadeItToEvent6 = false;

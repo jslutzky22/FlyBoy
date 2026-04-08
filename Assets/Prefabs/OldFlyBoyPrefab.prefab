@@ -906,6 +906,7 @@ GameObject:
   - component: {fileID: 1463929659832196078}
   - component: {fileID: 190121396712449511}
   - component: {fileID: 4079942442284337502}
+  - component: {fileID: 6941536374846150266}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1238,6 +1239,21 @@ MonoBehaviour:
         DecelTime: 0
   PlayerIndex: -1
   AutoEnableInputs: 1
+--- !u!114 &6941536374846150266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3700190028885975031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760915a7428e152428809684f3e6553d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TransparencyCheck
+  player: {fileID: 8133418985951616724}
+  caughtOnCamera: []
+  alreadyTransparent: []
 --- !u!1 &3825270899423321291
 GameObject:
   m_ObjectHideFlags: 0
