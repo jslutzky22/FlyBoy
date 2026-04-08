@@ -113,4 +113,9 @@ public class FlyingController : MonoBehaviour
     {
         print("Velocity: " + velocity);
     }
+
+    public void OnClick()
+    {
+        FindAnyObjectByType<SkillCheck>().OnClick();
+    }
 }
