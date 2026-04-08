@@ -6,7 +6,6 @@ public class MasterSwatter : MonoBehaviour
     [Header("Main Variables")]
     [SerializeField] private float swatterEventSystemTimer;
     private int swatterIndex = 0;
-    public bool flyBoyMadeItToEvent;
 
     [Header("City Health")]
     private int cityHealth;
@@ -22,6 +21,13 @@ public class MasterSwatter : MonoBehaviour
     [SerializeField] private GameObject[] eventFiveObjects;
     [SerializeField] private GameObject[] eventSixObjects;
     [SerializeField] private int eventWaitTimer;
+    public bool flyBoyMadeItToEvent0;
+    public bool flyBoyMadeItToEvent1;
+    public bool flyBoyMadeItToEvent2;
+    public bool flyBoyMadeItToEvent3;
+    public bool flyBoyMadeItToEvent4;
+    public bool flyBoyMadeItToEvent5;
+    public bool flyBoyMadeItToEvent6;
 
     void Start()
     {
@@ -33,44 +39,40 @@ public class MasterSwatter : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(swatterEventSystemTimer);
         swatterIndex = Random.Range(0, 7);
-        if (swatterIndex == 0 && !eventActive)
+        if (swatterIndex == 0)
         {
             eventActive = true;
             StartCoroutine(EventZero());
         }
-        else if (swatterIndex == 1 && !eventActive)
+        else if (swatterIndex == 1)
         {
             eventActive = true;
             StartCoroutine(EventOne());
         }
-        else if (swatterIndex == 2 && !eventActive)
+        else if (swatterIndex == 2)
         {
             eventActive = true;
             StartCoroutine(EventTwo());
         }
-        else if (swatterIndex == 3 && !eventActive)
+        else if (swatterIndex == 3)
         {
             eventActive = true;
             StartCoroutine(EventThree());
         }
-        else if (swatterIndex == 4 && !eventActive)
+        else if (swatterIndex == 4)
         {
             eventActive = true;
             StartCoroutine(EventFour());
         }
-        else if (swatterIndex == 5 && !eventActive)
+        else if (swatterIndex == 5)
         {
             eventActive = true;
             StartCoroutine(EventFive());
         }
-        else if (swatterIndex == 6 && !eventActive)
+        else if (swatterIndex == 6)
         {
             eventActive = true;
             StartCoroutine(EventSix());
-        }
-        while (!eventActive)
-        {
-
         }
         StartCoroutine(SwatterEventSystem());
     }
@@ -89,12 +91,12 @@ public class MasterSwatter : MonoBehaviour
             arrayLength++;
         }
         int timer = eventWaitTimer;
-        while (timer > 0 && !flyBoyMadeItToEvent)
+        while (timer > 0 && !flyBoyMadeItToEvent0)
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
         }
-        if (flyBoyMadeItToEvent)
+        if (flyBoyMadeItToEvent0)
         {
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
@@ -112,6 +114,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent0 = false;
             }
             else 
             {
@@ -123,7 +126,8 @@ public class MasterSwatter : MonoBehaviour
                     eventZeroObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
-                eventActive = false;
+                eventActive = false; 
+                flyBoyMadeItToEvent0 = false;
             }
         }
         else
@@ -137,6 +141,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent0 = false;
         }
     }
 
@@ -149,12 +154,12 @@ public class MasterSwatter : MonoBehaviour
             arrayLength++;
         }
         int timer = eventWaitTimer;
-        while (timer > 0 && !flyBoyMadeItToEvent)
+        while (timer > 0 && !flyBoyMadeItToEvent1)
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
         }
-        if (flyBoyMadeItToEvent)
+        if (flyBoyMadeItToEvent1)
         {
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
@@ -172,6 +177,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent1 = false;
             }
             else
             {
@@ -184,6 +190,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent1 = false;
             }
         }
         else
@@ -197,6 +204,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent1 = false;
         }
     }
 
@@ -209,12 +217,12 @@ public class MasterSwatter : MonoBehaviour
             arrayLength++;
         }
         int timer = eventWaitTimer;
-        while (timer > 0 && !flyBoyMadeItToEvent)
+        while (timer > 0 && !flyBoyMadeItToEvent2)
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
         }
-        if (flyBoyMadeItToEvent)
+        if (flyBoyMadeItToEvent2)
         {
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
@@ -232,6 +240,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent2 = false;
             }
             else
             {
@@ -244,6 +253,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent2 = false;
             }
         }
         else
@@ -257,6 +267,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent2 = false;
         }
     }
 
@@ -269,12 +280,12 @@ public class MasterSwatter : MonoBehaviour
             arrayLength++;
         }
         int timer = eventWaitTimer;
-        while (timer > 0 && !flyBoyMadeItToEvent)
+        while (timer > 0 && !flyBoyMadeItToEvent3)
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
         }
-        if (flyBoyMadeItToEvent)
+        if (flyBoyMadeItToEvent3)
         {
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
@@ -292,6 +303,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent3 = false;
             }
             else
             {
@@ -304,6 +316,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent3 = false;
             }
         }
         else
@@ -317,6 +330,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent3 = false;
         }
     }
 
@@ -329,12 +343,12 @@ public class MasterSwatter : MonoBehaviour
             arrayLength++;
         }
         int timer = eventWaitTimer;
-        while (timer > 0 && !flyBoyMadeItToEvent)
+        while (timer > 0 && !flyBoyMadeItToEvent4)
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
         }
-        if (flyBoyMadeItToEvent)
+        if (flyBoyMadeItToEvent4)
         {
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
@@ -352,6 +366,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent4 = false;
             }
             else
             {
@@ -364,6 +379,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent4 = false;
             }
         }
         else
@@ -377,6 +393,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent4 = false;
         }
     }
 
@@ -389,12 +406,12 @@ public class MasterSwatter : MonoBehaviour
             arrayLength++;
         }
         int timer = eventWaitTimer;
-        while (timer > 0 && !flyBoyMadeItToEvent)
+        while (timer > 0 && !flyBoyMadeItToEvent5)
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
         }
-        if (flyBoyMadeItToEvent)
+        if (flyBoyMadeItToEvent5)
         {
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
@@ -412,6 +429,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent5 = false;
             }
             else
             {
@@ -424,6 +442,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent5 = false;
             }
         }
         else
@@ -437,6 +456,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent5 = false;
         }
     }
 
@@ -449,12 +469,12 @@ public class MasterSwatter : MonoBehaviour
             arrayLength++;
         }
         int timer = eventWaitTimer;
-        while (timer > 0 && !flyBoyMadeItToEvent)
+        while (timer > 0 && !flyBoyMadeItToEvent6)
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
         }
-        if (flyBoyMadeItToEvent)
+        if (flyBoyMadeItToEvent6)
         {
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
@@ -472,6 +492,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent6 = false;
             }
             else
             {
@@ -484,6 +505,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent6 = false;
             }
         }
         else
@@ -497,6 +519,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent6 = false;
         }
     }
 }
