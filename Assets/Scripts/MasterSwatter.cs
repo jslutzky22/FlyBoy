@@ -28,6 +28,7 @@ public class MasterSwatter : MonoBehaviour
     public bool flyBoyMadeItToEvent4;
     public bool flyBoyMadeItToEvent5;
     public bool flyBoyMadeItToEvent6;
+    [SerializeField] int eventLoss;
 
     void Start()
     {
@@ -119,7 +120,7 @@ public class MasterSwatter : MonoBehaviour
             else 
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
+                cityHealth -= eventLoss;
                 arrayLength = 0;
                 while (arrayLength < eventZeroObjects.Length)
                 {
@@ -133,7 +134,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
+            cityHealth -= eventLoss;
             arrayLength = 0;
             while (arrayLength < eventZeroObjects.Length)
             {
@@ -182,7 +183,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
+                cityHealth -= eventLoss;
                 arrayLength = 0;
                 while (arrayLength < eventOneObjects.Length)
                 {
@@ -196,7 +197,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
+            cityHealth -= eventLoss;
             arrayLength = 0;
             while (arrayLength < eventOneObjects.Length)
             {
@@ -245,7 +246,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
+                cityHealth -= eventLoss;
                 arrayLength = 0;
                 while (arrayLength < eventTwoObjects.Length)
                 {
@@ -259,7 +260,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
+            cityHealth -= eventLoss;
             arrayLength = 0;
             while (arrayLength < eventTwoObjects.Length)
             {
@@ -308,7 +309,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
+                cityHealth -= eventLoss;
                 arrayLength = 0;
                 while (arrayLength < eventThreeObjects.Length)
                 {
@@ -322,7 +323,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
+            cityHealth -= eventLoss;
             arrayLength = 0;
             while (arrayLength < eventThreeObjects.Length)
             {
@@ -371,7 +372,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
+                cityHealth -= eventLoss;
                 arrayLength = 0;
                 while (arrayLength < eventFourObjects.Length)
                 {
@@ -385,7 +386,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
+            cityHealth -= eventLoss;
             arrayLength = 0;
             while (arrayLength < eventFourObjects.Length)
             {
@@ -434,7 +435,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
+                cityHealth -= eventLoss;
                 arrayLength = 0;
                 while (arrayLength < eventFiveObjects.Length)
                 {
@@ -448,7 +449,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
+            cityHealth -= eventLoss;
             arrayLength = 0;
             while (arrayLength < eventFiveObjects.Length)
             {
@@ -497,7 +498,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 //insert a value here, i just don't know what to put yet
-                cityHealth -= 0;
+                cityHealth -= eventLoss;
                 arrayLength = 0;
                 while (arrayLength < eventSixObjects.Length)
                 {
@@ -511,7 +512,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             //insert a value here, i just don't know what to put yet
-            cityHealth -= 0;
+            cityHealth -= eventLoss;
             arrayLength = 0;
             while (arrayLength < eventSixObjects.Length)
             {
