@@ -23,6 +23,9 @@ public class FlyingController : MonoBehaviour
     public Animator animator;
 
     private Rigidbody rb;
+
+    private AudioSource audioSource;
+    public AudioClip bonk;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +33,8 @@ public class FlyingController : MonoBehaviour
         currentHeight = transform.position.y;
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        audioSource = GetComponent<AudioSource>();  
     }
 
     // Update is called once per frame
@@ -114,7 +119,8 @@ public class FlyingController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("Velocity: " + velocity);
+        audioSource.pitch = Random.Range(.80f, 1.20f);
+        audioSource.PlayOneShot(bonk, Random.Range(0.50f, 1));
     }
 
     public IEnumerator ZoomOut()
