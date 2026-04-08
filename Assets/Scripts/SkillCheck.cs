@@ -47,7 +47,7 @@ public class SkillCheck : MonoBehaviour
         skillCheckActive = false;
     }
 
-    void OnClick()
+    public void OnClick()
     {
         if (hitIndicator.transform.eulerAngles.z > successZone.transform.eulerAngles.z - 26 && 
             hitIndicator.transform.eulerAngles.z < successZone.transform.eulerAngles.z + 26 && skillCheckActive)

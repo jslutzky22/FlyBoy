@@ -114,6 +114,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent0 = false;
             }
             else 
             {
@@ -125,7 +126,8 @@ public class MasterSwatter : MonoBehaviour
                     eventZeroObjects[arrayLength].SetActive(false);
                     arrayLength++;
                 }
-                eventActive = false;
+                eventActive = false; 
+                flyBoyMadeItToEvent0 = false;
             }
         }
         else
@@ -139,6 +141,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent0 = false;
         }
     }
 
@@ -174,6 +177,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent1 = false;
             }
             else
             {
@@ -186,6 +190,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent1 = false;
             }
         }
         else
@@ -199,6 +204,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent1 = false;
         }
     }
 
@@ -234,6 +240,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent2 = false;
             }
             else
             {
@@ -246,6 +253,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent2 = false;
             }
         }
         else
@@ -259,6 +267,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent2 = false;
         }
     }
 
@@ -294,6 +303,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent3 = false;
             }
             else
             {
@@ -306,6 +316,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent3 = false;
             }
         }
         else
@@ -319,6 +330,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent3 = false;
         }
     }
 
@@ -354,6 +366,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent4 = false;
             }
             else
             {
@@ -366,6 +379,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent4 = false;
             }
         }
         else
@@ -379,6 +393,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent4 = false;
         }
     }
 
@@ -414,6 +429,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent5 = false;
             }
             else
             {
@@ -426,6 +442,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent5 = false;
             }
         }
         else
@@ -439,6 +456,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent5 = false;
         }
     }
 
@@ -474,6 +492,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent6 = false;
             }
             else
             {
@@ -486,6 +505,7 @@ public class MasterSwatter : MonoBehaviour
                     arrayLength++;
                 }
                 eventActive = false;
+                flyBoyMadeItToEvent6 = false;
             }
         }
         else
@@ -499,6 +519,7 @@ public class MasterSwatter : MonoBehaviour
                 arrayLength++;
             }
             eventActive = false;
+            flyBoyMadeItToEvent6 = false;
         }
     }
 }
