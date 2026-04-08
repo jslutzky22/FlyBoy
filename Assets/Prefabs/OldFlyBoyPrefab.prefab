@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 3168791863037118284}
   - component: {fileID: 132359964518984979}
   - component: {fileID: 6828652794847350970}
+  - component: {fileID: 8991731623349111006}
   m_Layer: 0
   m_Name: FlyBoy
   m_TagString: Untagged
@@ -571,6 +572,14 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!81 &8991731623349111006
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2657868629369960487}
+  m_Enabled: 1
 --- !u!1 &2960176293645449672
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +685,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7959991597968212059}
   - component: {fileID: 5000051640762064965}
-  - component: {fileID: 4352725229834501}
   - component: {fileID: 728003487222858526}
   - component: {fileID: 8712465207745080275}
   - component: {fileID: 8701390246037701286}
@@ -757,14 +765,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4352725229834501
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3700190028885975031}
-  m_Enabled: 1
 --- !u!114 &728003487222858526
 MonoBehaviour:
   m_ObjectHideFlags: 0
