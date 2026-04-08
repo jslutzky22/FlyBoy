@@ -15,8 +15,11 @@ public class FlyingController : MonoBehaviour
     private bool moving = false;
 
     private float xRotation;
+    private float zRotation;
 
     private float velocity;
+
+    public Animator animator;
 
     private Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,9 +32,10 @@ public class FlyingController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        xRotation = playerCamera.transform.eulerAngles.x; 
+        xRotation = playerCamera.transform.eulerAngles.x;
+        zRotation = playerCamera.transform.eulerAngles.z;
 
         if (moving)
         {
@@ -43,8 +47,14 @@ public class FlyingController : MonoBehaviour
         }
 
         rb.linearVelocity = rb.linearVelocity * .95f;
-        currentHeight = Mathf.Clamp(transform.position.y, currentHeight, maxFloatHeight);
-        transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+        if (transform.position.y < minFloatHeight)
+        {
+            transform.position = new Vector3(transform.position.x, minFloatHeight, transform.position.z);
+        }
+        if (transform.position.y > maxFloatHeight)
+        {
+            transform.position = new Vector3(transform.position.x, maxFloatHeight, transform.position.z);
+        }
         velocity = rb.linearVelocity.magnitude;
 
         if (rb.linearVelocity.magnitude > maxSpeed)
@@ -55,15 +65,13 @@ public class FlyingController : MonoBehaviour
 
     private void MoveCharacter()
     {
+        animator.SetBool("FlyingAnimation", true);
         Vector3 cameraForward = new Vector3(playerCamera.transform.forward.x, 0, playerCamera.transform.forward.z);
         transform.rotation = Quaternion.LookRotation(cameraForward);
-        transform.Rotate(new Vector3(xRotation, 0, 0), Space.Self);
+        transform.Rotate(new Vector3(xRotation, 0, zRotation), Space.Self);
 
         Vector3 forward = playerCamera.transform.forward;
         Vector3 flyDirection = forward.normalized;
-
-        currentHeight += flyDirection.y * moveSpeed * Time.deltaTime;
-        currentHeight = Mathf.Clamp(currentHeight, minFloatHeight, maxFloatHeight);
 
         if (hyperSpeeding)
         {
@@ -73,11 +81,11 @@ public class FlyingController : MonoBehaviour
         {
             rb.AddForce(flyDirection * moveSpeed * Time.deltaTime * 500);
         }
-        transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
     }
 
     private void DisableMovement()
     {
+        animator.SetBool("FlyingAnimation", false);
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
