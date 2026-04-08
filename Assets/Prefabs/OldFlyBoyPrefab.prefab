@@ -792,8 +792,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2765b9acc8c634a8971d258cec2680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PizzaQuality
-  collisionPenalty: 2
-  collisionNumber: 0
+  collisionPenalty: 0
+  pointScaleFactor: 0.05
+  iFrameDuration: 0.5
 --- !u!1 &2960176293645449672
 GameObject:
   m_ObjectHideFlags: 0

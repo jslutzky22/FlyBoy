@@ -35,14 +35,14 @@ public class DeliveryPointCollision : MonoBehaviour
         float tipCalculation = basePrice + timer;
         //  penalty can not go below base price
         tipCalculation = Mathf.Max(basePrice,
-                                  (tipCalculation - PizzaQuality.instance.collisionNumber * PizzaQuality.instance.collisionPenalty));
+                                  (tipCalculation - PizzaQuality.instance.collisionPenalty));
         //  rounding to nearest hundredth
         tipCalculation = Mathf.Round(tipCalculation * 100)/100;
 
         Debug.Log("Gained $"+tipCalculation);
         PizzaDeliveryHandler.instance.IncreaseMoney(tipCalculation);
 
-        PizzaQuality.instance.collisionNumber = 0;
+        PizzaQuality.instance.collisionPenalty = 0;
     }
 
     private IEnumerator CountDownTimer()

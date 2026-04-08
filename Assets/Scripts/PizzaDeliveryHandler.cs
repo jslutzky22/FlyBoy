@@ -43,14 +43,22 @@ public class PizzaDeliveryHandler : MonoBehaviour
             Debug.LogWarning("Rent bar not set in inspector");
         }
 
-            deliveryPoints = GetComponentsInChildren<DeliveryPointCollision>(true);
+        deliveryPoints = GetComponentsInChildren<DeliveryPointCollision>(true);
+
+        if (maxVisiblePoints == 0)
+        {
+            return;
+        }
 
         for (int i = 0; i < maxVisiblePoints - 1; i++)
         {
             SpawnDeliveryPoint();
         }
 
-        NewDeliveryPointWithDelay();
+        if (transform.childCount > 1)
+        {
+            NewDeliveryPointWithDelay();
+        }
     }
 
     public void NewDeliveryPointWithDelay()
