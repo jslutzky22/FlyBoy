@@ -136,51 +136,51 @@ public class MasterSwatter : MonoBehaviour
         swatterAppears.SetActive(true);
         if (swatterIndex == 0)
         {
-            swatterText.text = "";
+            swatterText.text = "0";
         }
         else if (swatterIndex == 1)
         {
-            swatterText.text = "";
+            swatterText.text = "1";
         }
         else if (swatterIndex == 2)
         {
-            swatterText.text = "";
+            swatterText.text = "2";
         }
         else if (swatterIndex == 3)
         {
-            swatterText.text = "";
+            swatterText.text = "3";
         }
         else if (swatterIndex == 4)
         {
-            swatterText.text = "";
+            swatterText.text = "4";
         }
         else if (swatterIndex == 5)
         {
-            swatterText.text = "";
+            swatterText.text = "5";
         }
         else if (swatterIndex == 6)
         {
-            swatterText.text = "";
+            swatterText.text = "6";
         }
         else if (swatterIndex == 7)
         {
-            swatterText.text = "";
+            swatterText.text = "7";
         }
         else if (swatterIndex == 8)
         {
-            swatterText.text = "";
+            swatterText.text = "8";
         }
         else if (swatterIndex == 9)
         {
-            swatterText.text = "";
+            swatterText.text = "9";
         }
         else if (swatterIndex == 10)
         {
-            swatterText.text = "";
+            swatterText.text = "10";
         }
         else if (swatterIndex == 11)
         {
-            swatterText.text = "";
+            swatterText.text = "11";
         }
         yield return new WaitForSecondsRealtime(5f);
         swatterAppears.SetActive(false);
