@@ -27,6 +27,8 @@ public class DeliveryPointCollision : MonoBehaviour
             return;
         }
 
+        other.GetComponent<FlyingController>().MoneyMoneyMoney();
+
         PizzaDeliveryHandler.instance.NewDeliveryPointWithDelay();
 
         gameObject.SetActive(false);

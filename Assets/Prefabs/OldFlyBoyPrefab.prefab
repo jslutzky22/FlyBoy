@@ -732,6 +732,7 @@ MonoBehaviour:
   currentHeight: 0
   animator: {fileID: 7389800164614037164}
   bonk: {fileID: 8300000, guid: 5059ff24d660449468792d05dafa3ce6, type: 3}
+  hitParticle: {fileID: 1712033212874380892, guid: 086216d2b9e52844c821dbaf4b5405c2, type: 3}
 --- !u!114 &132359964518984979
 MonoBehaviour:
   m_ObjectHideFlags: 0
