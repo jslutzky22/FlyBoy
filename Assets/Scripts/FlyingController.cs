@@ -26,6 +26,11 @@ public class FlyingController : MonoBehaviour
 
     private AudioSource audioSource;
     public AudioClip bonk;
+    public AudioClip speedUp;
+    public AudioClip speedDown;
+
+    public GameObject hitParticle;
+    public GameObject moneyParticle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -119,12 +124,15 @@ public class FlyingController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Instantiate(hitParticle, transform.position, Quaternion.identity);
         audioSource.pitch = Random.Range(.80f, 1.20f);
         audioSource.PlayOneShot(bonk, Random.Range(0.50f, 1));
     }
 
     public IEnumerator ZoomOut()
     {
+        audioSource.pitch = Random.Range(.80f, 1.20f);
+        audioSource.PlayOneShot(speedUp, Random.Range(0.50f, 1));
         playerCamera.fieldOfView = 40;
         for (int i = 0; i < 100; i++)
         {
@@ -136,6 +144,8 @@ public class FlyingController : MonoBehaviour
 
     public IEnumerator ZoomIn()
     {
+        audioSource.pitch = Random.Range(.80f, 1.20f);
+        audioSource.PlayOneShot(speedDown, Random.Range(0.50f, 1));
         for (int i = 0; i < 100; i++)
         {
             playerCamera.fieldOfView -= .01f;
@@ -147,5 +157,10 @@ public class FlyingController : MonoBehaviour
     public void OnClick()
     {
         FindAnyObjectByType<SkillCheck>().OnClick();
+    }
+
+    public void MoneyMoneyMoney()
+    {
+        Instantiate(moneyParticle, transform.position, Quaternion.identity);
     }
 }

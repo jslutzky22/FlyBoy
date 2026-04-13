@@ -11,6 +11,7 @@ public class MasterSwatter : MonoBehaviour
     [SerializeField] GameObject approvalRating;
     [SerializeField] GameObject swatterAppears;
     [SerializeField] TMP_Text swatterText;
+    [SerializeField] GameObject pauseUI;
 
     [Header("City Health")]
     private int cityHealth;
@@ -53,7 +54,16 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator SwatterEventSystem()
     {
-        yield return new WaitForSecondsRealtime(swatterEventSystemTimer);
+        float timer = swatterEventSystemTimer;
+        while (timer > 0)
+        {
+            yield return new WaitForSecondsRealtime(1);
+            timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
+        }
         swatterIndex = Random.Range(0, 12);
         if (swatterIndex == 0)
         {
@@ -182,7 +192,16 @@ public class MasterSwatter : MonoBehaviour
         {
             swatterText.text = "11";
         }
-        yield return new WaitForSecondsRealtime(5f);
+        int timer2 = 5;
+        while (timer2 > 0)
+        {
+            yield return new WaitForSecondsRealtime(1);
+            timer2--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
+        }
         swatterAppears.SetActive(false);
         approvalRating.SetActive(true);
     }
@@ -195,7 +214,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventZero()
     {
         eventZeroObjects[0].SetActive(true);
-        if (eventZeroObjects[1] != null)
+        if (eventZeroObjects.Length == 2)
         { 
             eventZeroObjects[1].SetActive(false);
         }
@@ -204,6 +223,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent0)
         {
@@ -217,7 +240,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventZeroObjects[0].SetActive(false);
-                if (eventZeroObjects[1] != null)
+                if (eventZeroObjects.Length == 2)
                 {
                     eventZeroObjects[1].SetActive(true);
                 }
@@ -228,7 +251,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventZeroObjects[0].SetActive(false);
-                if (eventZeroObjects[1] != null)
+                if (eventZeroObjects.Length == 2)
                 {
                     eventZeroObjects[1].SetActive(true);
                 }
@@ -240,7 +263,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventZeroObjects[0].SetActive(false);
-            if (eventZeroObjects[1] != null)
+            if (eventZeroObjects.Length == 2)
             {
                 eventZeroObjects[1].SetActive(true);
             }
@@ -252,7 +275,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventOne()
     {
         eventOneObjects[0].SetActive(true);
-        if (eventOneObjects[1] != null)
+        if (eventOneObjects.Length == 2)
         {
             eventOneObjects[1].SetActive(false);
         }
@@ -261,6 +284,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent1)
         {
@@ -274,7 +301,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventOneObjects[0].SetActive(false);
-                if (eventOneObjects[1] != null)
+                if (eventOneObjects.Length == 2)
                 {
                     eventOneObjects[1].SetActive(true);
                 }
@@ -285,7 +312,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventOneObjects[0].SetActive(false);
-                if (eventOneObjects[1] != null)
+                if (eventOneObjects.Length == 2)
                 {
                     eventOneObjects[1].SetActive(true);
                 }
@@ -297,7 +324,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventOneObjects[0].SetActive(false);
-            if (eventOneObjects[1] != null)
+            if (eventOneObjects.Length == 2)
             {
                 eventOneObjects[1].SetActive(true);
             }
@@ -309,7 +336,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventTwo()
     {
         eventTwoObjects[0].SetActive(true);
-        if (eventTwoObjects[1] != null)
+        if (eventTwoObjects.Length == 2)
         {
             eventTwoObjects[1].SetActive(false);
         }
@@ -318,6 +345,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent2)
         {
@@ -331,7 +362,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventTwoObjects[0].SetActive(false);
-                if (eventTwoObjects[1] != null)
+                if (eventTwoObjects.Length == 2)
                 {
                     eventTwoObjects[1].SetActive(true);
                 }
@@ -342,7 +373,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventTwoObjects[0].SetActive(false);
-                if (eventTwoObjects[1] != null)
+                if (eventTwoObjects.Length == 2)
                 {
                     eventTwoObjects[1].SetActive(true);
                 }
@@ -354,7 +385,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventTwoObjects[0].SetActive(false);
-            if (eventTwoObjects[1] != null)
+            if (eventTwoObjects.Length == 2)
             {
                 eventTwoObjects[1].SetActive(true);
             }
@@ -366,7 +397,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventThree()
     {
         eventThreeObjects[0].SetActive(true);
-        if (eventThreeObjects[1] != null)
+        if (eventThreeObjects.Length == 2)
         {
             eventThreeObjects[1].SetActive(false);
         }
@@ -375,6 +406,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent3)
         {
@@ -388,7 +423,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventThreeObjects[0].SetActive(false);
-                if (eventThreeObjects[1] != null)
+                if (eventThreeObjects.Length == 2)
                 {
                     eventThreeObjects[1].SetActive(true);
                 }
@@ -399,7 +434,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventThreeObjects[0].SetActive(false);
-                if (eventThreeObjects[1] != null)
+                if (eventThreeObjects.Length == 2)
                 {
                     eventThreeObjects[1].SetActive(true);
                 }
@@ -411,7 +446,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventThreeObjects[0].SetActive(false);
-            if (eventThreeObjects[1] != null)
+            if (eventThreeObjects.Length == 2)
             {
                 eventThreeObjects[1].SetActive(true);
             }
@@ -423,7 +458,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventFour()
     {
         eventFourObjects[0].SetActive(true);
-        if (eventFourObjects[1] != null)
+        if (eventFourObjects.Length == 2)
         {
             eventFourObjects[1].SetActive(false);
         }
@@ -432,6 +467,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent4)
         {
@@ -445,7 +484,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventFourObjects[0].SetActive(false);
-                if (eventFourObjects[1] != null)
+                if (eventFourObjects.Length == 2)
                 {
                     eventFourObjects[1].SetActive(true);
                 }
@@ -456,7 +495,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventFourObjects[0].SetActive(false);
-                if (eventFourObjects[1] != null)
+                if (eventFourObjects.Length == 2)
                 {
                     eventFourObjects[1].SetActive(true);
                 }
@@ -468,7 +507,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventFourObjects[0].SetActive(false);
-            if (eventFourObjects[1] != null)
+            if (eventFourObjects.Length == 2)
             {
                 eventFourObjects[1].SetActive(true);
             }
@@ -480,7 +519,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventFive()
     {
         eventFiveObjects[0].SetActive(true);
-        if (eventFiveObjects[1] != null)
+        if (eventFiveObjects.Length == 2)
         {
             eventFiveObjects[1].SetActive(false);
         }
@@ -489,6 +528,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent5)
         {
@@ -502,7 +545,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventFiveObjects[0].SetActive(false);
-                if (eventFiveObjects[1] != null)
+                if (eventFiveObjects.Length == 2)
                 {
                     eventFiveObjects[1].SetActive(true);
                 }
@@ -513,7 +556,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventFiveObjects[0].SetActive(false);
-                if (eventFiveObjects[1] != null)
+                if (eventFiveObjects.Length == 2)
                 {
                     eventFiveObjects[1].SetActive(true);
                 }
@@ -525,7 +568,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventFiveObjects[0].SetActive(false);
-            if (eventFiveObjects[1] != null)
+            if (eventFiveObjects.Length == 2)
             {
                 eventFiveObjects[1].SetActive(true);
             }
@@ -537,7 +580,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventSix()
     {
         eventSixObjects[0].SetActive(true);
-        if (eventSixObjects[1] != null)
+        if (eventSixObjects.Length == 2)
         {
             eventSixObjects[1].SetActive(false);
         }
@@ -546,6 +589,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent6)
         {
@@ -559,7 +606,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventSixObjects[0].SetActive(false);
-                if (eventSixObjects[1] != null)
+                if (eventSixObjects.Length == 2)
                 {
                     eventSixObjects[1].SetActive(true);
                 }
@@ -570,7 +617,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventSixObjects[0].SetActive(false);
-                if (eventSixObjects[1] != null)
+                if (eventSixObjects.Length == 2)
                 {
                     eventSixObjects[1].SetActive(true);
                 }
@@ -582,7 +629,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventSixObjects[0].SetActive(false);
-            if (eventSixObjects[1] != null)
+            if (eventSixObjects.Length == 2)
             {
                 eventSixObjects[1].SetActive(true);
             }
@@ -594,7 +641,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventSeven()
     {
         eventSevenObjects[0].SetActive(true);
-        if (eventSevenObjects[1] != null)
+        if (eventSevenObjects.Length == 2)
         {
             eventSevenObjects[1].SetActive(false);
         }
@@ -603,6 +650,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent7)
         {
@@ -616,7 +667,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventSevenObjects[0].SetActive(false);
-                if (eventSevenObjects[1] != null)
+                if (eventSevenObjects.Length == 2)
                 {
                     eventSevenObjects[1].SetActive(true);
                 }
@@ -627,7 +678,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventSevenObjects[0].SetActive(false);
-                if (eventSevenObjects[1] != null)
+                if (eventSevenObjects.Length == 2)
                 {
                     eventSevenObjects[1].SetActive(true);
                 }
@@ -639,7 +690,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventSevenObjects[0].SetActive(false);
-            if (eventSevenObjects[1] != null)
+            if (eventSevenObjects.Length == 2)
             {
                 eventSevenObjects[1].SetActive(true);
             }
@@ -651,7 +702,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventEight()
     {
         eventEightObjects[0].SetActive(true);
-        if (eventEightObjects[1] != null)
+        if (eventEightObjects.Length == 2)
         {
             eventEightObjects[1].SetActive(false);
         }
@@ -660,6 +711,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent8)
         {
@@ -673,7 +728,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventEightObjects[0].SetActive(false);
-                if (eventEightObjects[1] != null)
+                if (eventEightObjects.Length == 2)
                 {
                     eventEightObjects[1].SetActive(true);
                 }
@@ -684,7 +739,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventEightObjects[0].SetActive(false);
-                if (eventEightObjects[1] != null)
+                if (eventEightObjects.Length == 2)
                 {
                     eventEightObjects[1].SetActive(true);
                 }
@@ -696,7 +751,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventEightObjects[0].SetActive(false);
-            if (eventEightObjects[1] != null)
+            if (eventEightObjects.Length == 2)
             {
                 eventEightObjects[1].SetActive(true);
             }
@@ -708,7 +763,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventNine()
     {
         eventNineObjects[0].SetActive(true);
-        if (eventNineObjects[1] != null)
+        if (eventNineObjects.Length == 2)
         {
             eventNineObjects[1].SetActive(false);
         }
@@ -717,6 +772,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent9)
         {
@@ -730,7 +789,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventNineObjects[0].SetActive(false);
-                if (eventNineObjects[1] != null)
+                if (eventNineObjects.Length == 2)
                 {
                     eventNineObjects[1].SetActive(true);
                 }
@@ -741,7 +800,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventNineObjects[0].SetActive(false);
-                if (eventNineObjects[1] != null)
+                if (eventNineObjects.Length == 2)
                 {
                     eventNineObjects[1].SetActive(true);
                 }
@@ -753,7 +812,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventNineObjects[0].SetActive(false);
-            if (eventNineObjects[1] != null)
+            if (eventNineObjects.Length == 2)
             {
                 eventNineObjects[1].SetActive(true);
             }
@@ -765,7 +824,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventTen()
     {
         eventTenObjects[0].SetActive(true);
-        if (eventTenObjects[1] != null)
+        if (eventTenObjects.Length == 2)
         {
             eventTenObjects[1].SetActive(false);
         }
@@ -774,6 +833,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent10)
         {
@@ -787,7 +850,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventTenObjects[0].SetActive(false);
-                if (eventTenObjects[1] != null)
+                if (eventTenObjects.Length == 2)
                 {
                     eventTenObjects[1].SetActive(true);
                 }
@@ -798,7 +861,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventTenObjects[0].SetActive(false);
-                if (eventTenObjects[1] != null)
+                if (eventTenObjects.Length == 2)
                 {
                     eventTenObjects[1].SetActive(true);
                 }
@@ -810,7 +873,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventTenObjects[0].SetActive(false);
-            if (eventTenObjects[1] != null)
+            if (eventTenObjects.Length == 2)
             {
                 eventTenObjects[1].SetActive(true);
             }
@@ -822,7 +885,7 @@ public class MasterSwatter : MonoBehaviour
     IEnumerator EventEleven()
     {
         eventElevenObjects[0].SetActive(true);
-        if (eventElevenObjects[1] != null)
+        if (eventElevenObjects.Length == 2)
         {
             eventElevenObjects[1].SetActive(false);
         }
@@ -831,6 +894,10 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            while (pauseUI.activeSelf == true)
+            {
+                yield return null;
+            }
         }
         if (flyBoyMadeItToEvent11)
         {
@@ -844,7 +911,7 @@ public class MasterSwatter : MonoBehaviour
                 FindAnyObjectByType<SkillCheck>().skillCheckHit = false;
                 CityHeal();
                 eventElevenObjects[0].SetActive(false);
-                if (eventElevenObjects[1] != null)
+                if (eventElevenObjects.Length == 2)
                 {
                     eventElevenObjects[1].SetActive(true);
                 }
@@ -855,7 +922,7 @@ public class MasterSwatter : MonoBehaviour
             {
                 cityHealth -= eventLoss;
                 eventElevenObjects[0].SetActive(false);
-                if (eventElevenObjects[1] != null)
+                if (eventElevenObjects.Length == 2)
                 {
                     eventElevenObjects[1].SetActive(true);
                 }
@@ -867,7 +934,7 @@ public class MasterSwatter : MonoBehaviour
         {
             cityHealth -= eventLoss;
             eventElevenObjects[0].SetActive(false);
-            if (eventElevenObjects[1] != null)
+            if (eventElevenObjects.Length == 2)
             {
                 eventElevenObjects[1].SetActive(true);
             }
