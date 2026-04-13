@@ -4,14 +4,17 @@ using UnityEngine.InputSystem;
 
 public class ArrowPoint : MonoBehaviour
 {
-
-    [SerializeField] private Transform selectedObj;
+    public static ArrowPoint instance;
+    public Transform selectedObj;
     private Transform playerTransform;
-    [SerializeField] private TMP_Text distanceText;
+    public TMP_Text distanceText;
+    private Transform arrow;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
+        arrow = transform.GetChild(0);
         playerTransform = FindFirstObjectByType<FlyingController>().transform;
     }
 
@@ -20,8 +23,18 @@ public class ArrowPoint : MonoBehaviour
     {
         if (selectedObj)
         {
-            transform.forward = selectedObj.position - playerTransform.position;
+            arrow.forward = selectedObj.position - playerTransform.position;
             distanceText.text = Mathf.Round(Vector3.Distance(selectedObj.position, playerTransform.position)).ToString();
         }
+    }
+
+    public void DisplayArrow()
+    {
+        arrow.gameObject.SetActive(true);
+    }
+
+    public void HideArrow()
+    {
+        arrow.gameObject.SetActive(false);
     }
 }
