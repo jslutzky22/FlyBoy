@@ -62,21 +62,12 @@ public class PizzaDeliveryHandler : MonoBehaviour
     }
 
     public void NewDeliveryPointWithDelay()
-    {
-        //  spawn immediately when no active points
-        if (ActivePoints == 0)
-        {
-            SpawnDeliveryPoint();
-        }
-        else
-        {
-            StartCoroutine(SpawnDelay());
-        }
-
+    {   
+        StartCoroutine(SpawnDelay());
     }
 
     //  for immediately spawning a delivery point
-    private void SpawnDeliveryPoint()
+    public void SpawnDeliveryPoint()
     {
         int index = Random.Range(0, deliveryPoints.Length);
         if (!deliveryPoints[index].gameObject.activeSelf)

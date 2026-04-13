@@ -32,7 +32,14 @@ public class DeliveryPointCollision : MonoBehaviour
 
         Instantiate(moneyParticle, other.transform.position, Quaternion.identity);
 
-        PizzaDeliveryHandler.instance.NewDeliveryPointWithDelay();
+        if (PizzaDeliveryHandler.instance.ActivePoints == 0)
+        {
+            PizzaDeliveryHandler.instance.SpawnDeliveryPoint();
+        }
+        else
+        {
+            PizzaDeliveryHandler.instance.NewDeliveryPointWithDelay();
+        }
 
         gameObject.SetActive(false);
 
