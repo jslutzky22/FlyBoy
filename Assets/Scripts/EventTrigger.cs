@@ -34,6 +34,26 @@ public class EventTrigger : MonoBehaviour
             {
                 FindFirstObjectByType<MasterSwatter>().flyBoyMadeItToEvent6 = true;
             }
+            if (gameObject.name == "Event7Trigger")
+            {
+                FindFirstObjectByType<MasterSwatter>().flyBoyMadeItToEvent7 = true;
+            }
+            if (gameObject.name == "Event8Trigger")
+            {
+                FindFirstObjectByType<MasterSwatter>().flyBoyMadeItToEvent8 = true;
+            }
+            if (gameObject.name == "Event9Trigger")
+            {
+                FindFirstObjectByType<MasterSwatter>().flyBoyMadeItToEvent9 = true;
+            }
+            if (gameObject.name == "Event10Trigger")
+            {
+                FindFirstObjectByType<MasterSwatter>().flyBoyMadeItToEvent10 = true;
+            }
+            if (gameObject.name == "Event11Trigger")
+            {
+                FindFirstObjectByType<MasterSwatter>().flyBoyMadeItToEvent11 = true;
+            }
         }
     }
 }

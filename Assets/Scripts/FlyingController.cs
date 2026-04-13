@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -22,6 +23,12 @@ public class FlyingController : MonoBehaviour
     public Animator animator;
 
     private Rigidbody rb;
+
+    private AudioSource audioSource;
+    public AudioClip bonk;
+
+    public GameObject hitParticle;
+    public GameObject moneyParticle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +36,8 @@ public class FlyingController : MonoBehaviour
         currentHeight = transform.position.y;
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        audioSource = GetComponent<AudioSource>();  
     }
 
     // Update is called once per frame
@@ -102,20 +111,50 @@ public class FlyingController : MonoBehaviour
     public void OnHyperSpeed()
     {
         hyperSpeeding = true;
+        StartCoroutine(ZoomOut());
     }
 
     public void OnHyperSpeedStop()
     {
         hyperSpeeding = false;
+        StartCoroutine(ZoomIn());
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("Velocity: " + velocity);
+        Instantiate(hitParticle, transform.position, Quaternion.identity);
+        audioSource.pitch = Random.Range(.80f, 1.20f);
+        audioSource.PlayOneShot(bonk, Random.Range(0.50f, 1));
     }
 
+    public IEnumerator ZoomOut()
+    {
+        playerCamera.fieldOfView = 40;
+        for (int i = 0; i < 100; i++)
+        {
+            playerCamera.fieldOfView += .01f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        //playerCamera.fieldOfView = 50;
+    }
+
+    public IEnumerator ZoomIn()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            playerCamera.fieldOfView -= .01f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        playerCamera.fieldOfView = 40;
+    }
+    
     public void OnClick()
     {
         FindAnyObjectByType<SkillCheck>().OnClick();
+    }
+
+    public void MoneyMoneyMoney()
+    {
+        Instantiate(moneyParticle, transform.position, Quaternion.identity);
     }
 }
