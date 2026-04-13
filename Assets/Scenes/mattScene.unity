@@ -52010,6 +52010,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
   m_PrefabInstance: {fileID: 486922945}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &487331259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7690754447646448609, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+  m_PrefabInstance: {fileID: 1104483708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &489540830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114062,6 +114067,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+      propertyPath: pauseUI
+      value: 
+      objectReference: {fileID: 487331259}
+    - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+      propertyPath: swatterText
+      value: 
+      objectReference: {fileID: 1719259030}
+    - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+      propertyPath: approvalRating
+      value: 
+      objectReference: {fileID: 1476212600}
+    - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+      propertyPath: swatterAppears
+      value: 
+      objectReference: {fileID: 1925905697}
     - target: {fileID: 6811476917573921004, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: m_Name
       value: CanvasUI
@@ -114073,16 +114094,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6811476917573921004, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1104483712}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
---- !u!1 &1104483709 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6811476917573921004, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
-  m_PrefabInstance: {fileID: 1104483708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1104483710 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2783280673161082327, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
@@ -114105,56 +114118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
---- !u!114 &1104483712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104483709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d467edd2762c2d4cab52dbcc5c7effa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MasterSwatter
-  swatterEventSystemTimer: 60
-  approvalRating: {fileID: 0}
-  swatterAppears: {fileID: 0}
-  swatterText: {fileID: 0}
-  pauseUI: {fileID: 0}
-  eventZeroObjects:
-  - {fileID: 1888629044}
-  eventOneObjects:
-  - {fileID: 548064917693820553, guid: 9d73087e5bbae08478360b45920b1d39, type: 3}
-  eventTwoObjects:
-  - {fileID: 3127271625109077765, guid: 71badc4bbf0a5ce4aa8cd0cce467cd0e, type: 3}
-  eventThreeObjects:
-  - {fileID: 3544953512045091657, guid: a5577688186bf2d42a489b6cd31c266e, type: 3}
-  eventFourObjects:
-  - {fileID: 4269942382120088794, guid: 3cb77c8b41f907045b654ad98a0f9a55, type: 3}
-  eventFiveObjects:
-  - {fileID: 9087043656058527110, guid: 1bd992fa5ce154c47b7f177a7ccdce8f, type: 3}
-  eventSixObjects:
-  - {fileID: 3984272083187461254, guid: f1655325dbb6fc24a87b4296c6ada7e2, type: 3}
-  eventSevenObjects: []
-  eventEightObjects: []
-  eventNineObjects: []
-  eventTenObjects: []
-  eventElevenObjects: []
-  eventWaitTimer: 30
-  flyBoyMadeItToEvent0: 0
-  flyBoyMadeItToEvent1: 0
-  flyBoyMadeItToEvent2: 0
-  flyBoyMadeItToEvent3: 0
-  flyBoyMadeItToEvent4: 0
-  flyBoyMadeItToEvent5: 0
-  flyBoyMadeItToEvent6: 0
-  flyBoyMadeItToEvent7: 0
-  flyBoyMadeItToEvent8: 0
-  flyBoyMadeItToEvent9: 0
-  flyBoyMadeItToEvent10: 0
-  flyBoyMadeItToEvent11: 0
-  eventLoss: 0
 --- !u!1001 &1105210333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -152736,6 +152699,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
   m_PrefabInstance: {fileID: 1475959898}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1476212600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8503570373499225215, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+  m_PrefabInstance: {fileID: 1104483708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1476665053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176292,6 +176260,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
   m_PrefabInstance: {fileID: 1717948611}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1719259030 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2124888770216982864, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+  m_PrefabInstance: {fileID: 1104483708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1719452506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -193565,11 +193544,6 @@ PrefabInstance:
       addedObject: {fileID: 528393732}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b650cd9f7133e9b49836a2698e5bda57, type: 3}
---- !u!1 &1888629044 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1167017827963351068, guid: b650cd9f7133e9b49836a2698e5bda57, type: 3}
-  m_PrefabInstance: {fileID: 1888629043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1888629045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6435105858231030918, guid: b650cd9f7133e9b49836a2698e5bda57, type: 3}
@@ -197764,6 +197738,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
   m_PrefabInstance: {fileID: 1925319935}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1925905697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5280410024906387194, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+  m_PrefabInstance: {fileID: 1104483708}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1926069965
 PrefabInstance:

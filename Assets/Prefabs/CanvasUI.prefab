@@ -1658,6 +1658,8 @@ MonoBehaviour:
   swatterAppears: {fileID: 0}
   swatterText: {fileID: 0}
   pauseUI: {fileID: 0}
+  cityHealth: 0
+  cityHealAmount: 0
   eventZeroObjects:
   - {fileID: 0}
   eventOneObjects:
@@ -1975,6 +1977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3701342636687379636}
   - component: {fileID: 1954870820290765120}
+  - component: {fileID: 5397351208877572712}
   m_Layer: 5
   m_Name: approval rating
   m_TagString: Untagged
@@ -2055,6 +2058,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5397351208877572712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503570373499225215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947cd7b821d79bd4cb2b0d62699499a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ApprovalRatingUI
+  dial: {fileID: 2803105931022984003}
+  percentage: {fileID: 8551391394092756394}
 --- !u!1 &8618609937359591716
 GameObject:
   m_ObjectHideFlags: 0
