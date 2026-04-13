@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6195690514331328467}
   - component: {fileID: 3683362016507597363}
   - component: {fileID: 1510364151546422843}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: deliveryPointPrototype
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,3 +128,4 @@ MonoBehaviour:
   basePrice: 10
   timeLimit: 30
   timer: 0
+  moneyParticle: {fileID: 6849734353970219408, guid: db3111a592a39ba41bfbbced703ac126, type: 3}

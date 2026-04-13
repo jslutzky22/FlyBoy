@@ -1,21 +1,35 @@
+using System.Collections;
 using UnityEngine;
 
 public class PizzaQuality : MonoBehaviour
 {
     public static PizzaQuality instance;
     public float collisionPenalty;
-    public int collisionNumber;
+    [SerializeField][Range(0, 1)] private float pointScaleFactor;
+    //public int collisionNumber;
+    private Rigidbody rb;
+    [SerializeField] private float iFrameDuration;
+    private bool invulnerable;
 
     private void Start()
     {
         instance = this;
+        rb = GetComponent<Rigidbody>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("PizzaDamager"))
+        if (!invulnerable)
         {
-            collisionNumber++;
+            StartCoroutine(IFrames());
+            collisionPenalty += rb.angularVelocity.magnitude * pointScaleFactor;
         }
+    }
+
+    private IEnumerator IFrames()
+    {
+        invulnerable = true;
+        yield return new WaitForSeconds(iFrameDuration);
+        invulnerable = false;
     }
 }
