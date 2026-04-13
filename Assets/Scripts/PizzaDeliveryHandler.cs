@@ -40,7 +40,7 @@ public class PizzaDeliveryHandler : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Rent bar not set in inspector");
+            Debug.LogWarning("Rent text not set in inspector");
         }
 
         deliveryPoints = GetComponentsInChildren<DeliveryPointCollision>(true);

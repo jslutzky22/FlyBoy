@@ -6,6 +6,7 @@ public class DeliveryPointCollision : MonoBehaviour
     [SerializeField] private float basePrice;
     [SerializeField] private float timeLimit;
     [SerializeField] private float timer;
+    [SerializeField] private GameObject moneyParticle;
 
     private void OnEnable()
     {
@@ -27,11 +28,17 @@ public class DeliveryPointCollision : MonoBehaviour
             return;
         }
 
-        other.GetComponent<FlyingController>().MoneyMoneyMoney();
+        //other.GetComponent<FlyingController>().MoneyMoneyMoney();
+
+        Instantiate(moneyParticle, other.transform.position, Quaternion.identity);
 
         PizzaDeliveryHandler.instance.NewDeliveryPointWithDelay();
 
         gameObject.SetActive(false);
+
+        ArrowPoint.instance.selectedObj = null;
+        ArrowPoint.instance.HideArrow();
+        ArrowPoint.instance.distanceText.text = "No objective selected";
 
         //  not final calculation
         float tipCalculation = basePrice + timer;
