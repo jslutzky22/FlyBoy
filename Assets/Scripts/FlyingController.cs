@@ -26,6 +26,9 @@ public class FlyingController : MonoBehaviour
 
     private AudioSource audioSource;
     public AudioClip bonk;
+    public AudioClip speedUp;
+    public AudioClip speedDown;
+    public AudioClip money;
 
     public GameObject hitParticle;
     public GameObject moneyParticle;
@@ -129,6 +132,8 @@ public class FlyingController : MonoBehaviour
 
     public IEnumerator ZoomOut()
     {
+        audioSource.pitch = Random.Range(.80f, 1.20f);
+        audioSource.PlayOneShot(speedUp, Random.Range(0.50f, 1));
         playerCamera.fieldOfView = 40;
         for (int i = 0; i < 100; i++)
         {
@@ -140,6 +145,8 @@ public class FlyingController : MonoBehaviour
 
     public IEnumerator ZoomIn()
     {
+        audioSource.pitch = Random.Range(.80f, 1.20f);
+        audioSource.PlayOneShot(speedDown, Random.Range(0.50f, 1));
         for (int i = 0; i < 100; i++)
         {
             playerCamera.fieldOfView -= .01f;
@@ -155,6 +162,8 @@ public class FlyingController : MonoBehaviour
 
     public void MoneyMoneyMoney()
     {
+        audioSource.pitch = Random.Range(.80f, 1.20f);
+        audioSource.PlayOneShot(money, Random.Range(0.50f, 1));
         Instantiate(moneyParticle, transform.position, Quaternion.identity);
     }
 }
