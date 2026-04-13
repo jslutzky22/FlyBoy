@@ -734,8 +734,9 @@ MonoBehaviour:
   bonk: {fileID: 8300000, guid: 5059ff24d660449468792d05dafa3ce6, type: 3}
   speedUp: {fileID: 8300000, guid: 6f5cc00d2eadb594d8e19cea27b4cbd4, type: 3}
   speedDown: {fileID: 8300000, guid: bb6baf3b35383a84d9548ab0e8af1adf, type: 3}
+  money: {fileID: 8300000, guid: 4ab6ba2954dfbf14e85398d76404ca6a, type: 3}
   hitParticle: {fileID: 1712033212874380892, guid: 086216d2b9e52844c821dbaf4b5405c2, type: 3}
-  moneyParticle: {fileID: 0}
+  moneyParticle: {fileID: 6849734353970219408, guid: db3111a592a39ba41bfbbced703ac126, type: 3}
 --- !u!114 &132359964518984979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,7 +2133,7 @@ Transform:
   m_GameObject: {fileID: 8200120884754558396}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09687134, y: 0.26046082, z: -0.026275566, w: 0.96025294}
-  m_LocalPosition: {x: 23.334232, y: 6.2245893, z: -153.74579}
+  m_LocalPosition: {x: 44.207542, y: 6.2245893, z: -126.43468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
