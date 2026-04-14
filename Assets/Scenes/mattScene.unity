@@ -111103,6 +111103,10 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5332353270366987320, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
+      propertyPath: visionFilter
+      value: 
+      objectReference: {fileID: 1377279593}
     - target: {fileID: 5887080725524478327, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.3
@@ -142244,6 +142248,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1119579898712936055, guid: 3fc3dba9c845d5145a9dc50e822093f0, type: 3}
   m_PrefabInstance: {fileID: 1376661159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1377279593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7506822773475632754, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+  m_PrefabInstance: {fileID: 1104483708}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1377691940
 PrefabInstance:
