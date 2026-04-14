@@ -1844,6 +1844,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 800befcc62026a34693972077c91698d, type: 3}
   m_PrefabInstance: {fileID: 13737711}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &13900700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3844226028993933570, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+  m_PrefabInstance: {fileID: 1104483708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &14225538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111095,14 +111100,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyBoyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3700190028885975031, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 5000051640762064965, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
       propertyPath: m_FocalLength
       value: 32.96973
       objectReference: {fileID: 0}
     - target: {fileID: 5000051640762064965, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000051640762064965, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
       propertyPath: m_projectionMatrixMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5332353270366987320, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
+      propertyPath: reticle
+      value: 
+      objectReference: {fileID: 1419985906}
     - target: {fileID: 5332353270366987320, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
       propertyPath: visionFilter
       value: 
@@ -111179,6 +111196,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.026275542
       objectReference: {fileID: 0}
+    - target: {fileID: 9135688222280876848, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
+      propertyPath: penaltyLabel
+      value: 
+      objectReference: {fileID: 13900700}
     m_RemovedComponents:
     - {fileID: 4352725229834501, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
     m_RemovedGameObjects: []
@@ -147036,6 +147057,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 120449a04911a924ca1239be382ff0be, type: 3}
   m_PrefabInstance: {fileID: 1419025951}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1419985906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9000560236433821092, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+  m_PrefabInstance: {fileID: 1104483708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1421357956
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeliveryPointCollision : MonoBehaviour
 {
@@ -7,10 +8,17 @@ public class DeliveryPointCollision : MonoBehaviour
     [SerializeField] private float timeLimit;
     [SerializeField] private float timer;
     [SerializeField] private GameObject moneyParticle;
+    [SerializeField] private Slider timerVisual;
+
+    private void Start()
+    {
+        timerVisual.maxValue = timeLimit;
+    }
 
     private void OnEnable()
     {
         timer = timeLimit;
+        timerVisual.value = timer;
         PizzaDeliveryHandler.instance.ActivePoints++;
         StartCoroutine(CountDownTimer());
     }
@@ -32,7 +40,7 @@ public class DeliveryPointCollision : MonoBehaviour
 
         Instantiate(moneyParticle, other.transform.position, Quaternion.identity);
 
-        if (PizzaDeliveryHandler.instance.ActivePoints == 0)
+        if (PizzaDeliveryHandler.instance.ActivePoints == 1)
         {
             PizzaDeliveryHandler.instance.SpawnDeliveryPoint();
         }
@@ -66,6 +74,7 @@ public class DeliveryPointCollision : MonoBehaviour
         while (timer > 0 && gameObject.activeSelf)
         {
             timer -= Time.deltaTime;
+            timerVisual.value = timer;
             yield return null;
         }
     }

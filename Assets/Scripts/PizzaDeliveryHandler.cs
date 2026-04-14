@@ -102,6 +102,8 @@ public class PizzaDeliveryHandler : MonoBehaviour
             rentBar.value = Money;
             rentText.text = "$" + moneyString + "/$" + Rent;
         }
+
+        Timer.instance.winCheck();
     }
 
     // Update is called once per frame
