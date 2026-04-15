@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ObjectiveSelect : MonoBehaviour
 {
@@ -9,6 +11,17 @@ public class ObjectiveSelect : MonoBehaviour
     private FlyingController player;
     [SerializeField] private LayerMask hitScanMask;
     [SerializeField] private Camera UICam;
+    [SerializeField] private GameObject visionFilter;
+    [SerializeField] private Image reticle;
+
+    [Serializable]
+    private struct ReticleColor
+    {
+        public Color normal;
+        public Color selected;
+    }
+
+    [SerializeField] private ReticleColor reticleColor;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,13 +38,26 @@ public class ObjectiveSelect : MonoBehaviour
         flyVisionEnabled = true;
         //Debug.Log("vision");
         Time.timeScale = slowDownScale;
+        if (visionFilter)
+        {
+            visionFilter.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Vision filter not set");
+        }
     }
 
     private void FlyVisionCanceled(InputAction.CallbackContext obj)
     {
+        reticle.color = reticleColor.normal;
         flyVisionEnabled = false;
         //Debug.Log("no vision");
         Time.timeScale = 1;
+        if (visionFilter)
+        {
+            visionFilter.SetActive(false);
+        }
 
         if (Physics.Raycast(UICam.transform.position, UICam.transform.forward, out RaycastHit hit, 99999, hitScanMask))
         {
@@ -53,6 +79,18 @@ public class ObjectiveSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!flyVision.IsPressed())
+        {
+            return;
+        }
+
+        if (Physics.Raycast(UICam.transform.position, UICam.transform.forward, out RaycastHit hit, 99999, hitScanMask))
+        {
+            reticle.color = reticleColor.selected;
+        }
+        else
+        {
+            reticle.color = reticleColor.normal;
+        }
     }
 }

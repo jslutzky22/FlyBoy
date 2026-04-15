@@ -24,7 +24,7 @@ public class ArrowPoint : MonoBehaviour
         if (selectedObj)
         {
             arrow.forward = selectedObj.position - playerTransform.position;
-            distanceText.text = Mathf.Round(Vector3.Distance(selectedObj.position, playerTransform.position)).ToString();
+            distanceText.text = Mathf.Round(Vector3.Distance(selectedObj.position, playerTransform.position)) + " ft";
         }
     }
 

@@ -157,7 +157,12 @@ public class FlyingController : MonoBehaviour
     
     public void OnClick()
     {
-        FindAnyObjectByType<SkillCheck>().OnClick();
+        SkillCheck check = FindAnyObjectByType<SkillCheck>();
+
+        if (check)
+        {
+            check.OnClick();
+        }
     }
 
     public void MoneyMoneyMoney()

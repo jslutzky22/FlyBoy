@@ -801,9 +801,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2765b9acc8c634a8971d258cec2680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PizzaQuality
-  collisionPenalty: 2
-  pointScaleFactor: 0
-  iFrameDuration: 0
+  collisionPenalty: 0
+  pointScaleFactor: 0.15
+  iFrameDuration: 0.5
+  labelDuration: 1
+  penaltyLabel: {fileID: 0}
 --- !u!81 &3848921718261814721
 AudioListener:
   m_ObjectHideFlags: 0
@@ -924,8 +926,13 @@ MonoBehaviour:
   slowDownScale: 0.25
   hitScanMask:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 64
   UICam: {fileID: 1827933102525869446}
+  visionFilter: {fileID: 0}
+  reticle: {fileID: 0}
+  reticleColor:
+    normal: {r: 1, g: 1, b: 1, a: 1}
+    selected: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &2960176293645449672
 GameObject:
   m_ObjectHideFlags: 0

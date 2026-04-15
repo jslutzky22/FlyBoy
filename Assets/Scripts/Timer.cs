@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    public static Timer instance;
+
     [Serializable]
     protected struct TimeFormat
     {
@@ -19,6 +21,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         timerText = GetComponentInChildren<TMP_Text>();
     }
 
@@ -32,7 +35,7 @@ public class Timer : MonoBehaviour
         if (timeLimit.minutes <= 0 && timeLimit.seconds <= 0)
         {
             timerText.text = "0:00";
-            winCheck();
+            SceneManager.LoadScene(loseIndex);
             return;
         }
 
@@ -49,15 +52,11 @@ public class Timer : MonoBehaviour
         timerText.text = timeLimit.minutes + ":" + (roundedSeconds < 10 ? "0" : "") + roundedSeconds;
     }
 
-    private void winCheck()
+    public void winCheck()
     {
         if(PizzaDeliveryHandler.instance.Money >= PizzaDeliveryHandler.instance.Rent)
         {
             SceneManager.LoadScene(winIndex);
-        }
-        else
-        {
-            SceneManager.LoadScene(loseIndex);
         }
     }
 }
