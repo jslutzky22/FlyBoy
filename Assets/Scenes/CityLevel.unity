@@ -108518,6 +108518,10 @@ PrefabInstance:
       propertyPath: penaltyLabel
       value: 
       objectReference: {fileID: 1144716830}
+    - target: {fileID: 9135688222280876848, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
+      propertyPath: iFrameDuration
+      value: 0.85
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4352725229834501, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
     m_RemovedGameObjects: []
