@@ -1819,6 +1819,19 @@ MonoBehaviour:
   eventTenObjects: []
   eventElevenObjects: []
   eventWaitTimer: 30
+  eventTimerVisuals:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   flyBoyMadeItToEvent0: 0
   flyBoyMadeItToEvent1: 0
   flyBoyMadeItToEvent2: 0
@@ -1832,6 +1845,30 @@ MonoBehaviour:
   flyBoyMadeItToEvent10: 0
   flyBoyMadeItToEvent11: 0
   eventLoss: 0
+  event0Text: 
+  event1Text: 
+  event2Text: 
+  event3Text: 
+  event4Text: 
+  event5Text: 
+  event6Text: 
+  event7Text: 
+  event8Text: 
+  event9Text: 
+  event10Text: 
+  event11Text: 
+  event0Audio: {fileID: 0}
+  event1Audio: {fileID: 0}
+  event2Audio: {fileID: 0}
+  event3Audio: {fileID: 0}
+  event4Audio: {fileID: 0}
+  event5Audio: {fileID: 0}
+  event6Audio: {fileID: 0}
+  event7Audio: {fileID: 0}
+  event8Audio: {fileID: 0}
+  event9Audio: {fileID: 0}
+  event10Audio: {fileID: 0}
+  event11Audio: {fileID: 0}
 --- !u!1 &7408527847051736589
 GameObject:
   m_ObjectHideFlags: 0

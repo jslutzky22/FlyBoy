@@ -34,6 +34,7 @@ public class MasterSwatter : MonoBehaviour
     [SerializeField] private GameObject[] eventTenObjects;
     [SerializeField] private GameObject[] eventElevenObjects;
     [SerializeField] private int eventWaitTimer;
+    [SerializeField] private Slider[] eventTimerVisuals;
     public bool flyBoyMadeItToEvent0;
     public bool flyBoyMadeItToEvent1;
     public bool flyBoyMadeItToEvent2;
