@@ -111100,10 +111100,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyBoyPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 3700190028885975031, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
-      objectReference: {fileID: 0}
     - target: {fileID: 5000051640762064965, guid: 53d18dd018b77ca419f9441d9de42038, type: 3}
       propertyPath: m_FocalLength
       value: 32.96973
