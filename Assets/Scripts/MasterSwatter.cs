@@ -258,6 +258,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[0].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -320,6 +321,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[1].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -382,6 +384,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[2].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -444,6 +447,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[3].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -506,6 +510,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[4].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -568,6 +573,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[5].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -630,6 +636,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[6].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -692,6 +699,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[7].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -754,6 +762,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[8].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -816,6 +825,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[9].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -878,6 +888,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[10].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -940,6 +951,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[11].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
