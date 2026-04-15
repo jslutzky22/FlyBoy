@@ -10,6 +10,7 @@ public class PizzaQuality : MonoBehaviour
     //public int collisionNumber;
     private Rigidbody rb;
     [SerializeField] private float iFrameDuration;
+    [SerializeField] private float minimumVelocity;
     [SerializeField] private float labelDuration;
     private bool invulnerable;
     [SerializeField] private GameObject penaltyLabel;
@@ -43,7 +44,7 @@ public class PizzaQuality : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!invulnerable)
+        if (!invulnerable && rb.linearVelocity.magnitude >= minimumVelocity)
         {
             StartCoroutine(IFrames());
             float penaltyCalculation = rb.linearVelocity.magnitude * pointScaleFactor;

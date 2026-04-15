@@ -804,8 +804,10 @@ MonoBehaviour:
   collisionPenalty: 0
   pointScaleFactor: 0.15
   iFrameDuration: 0.5
+  minimumVelocity: 20
   labelDuration: 1
   penaltyLabel: {fileID: 0}
+  moneyGainLabel: {fileID: 0}
 --- !u!81 &3848921718261814721
 AudioListener:
   m_ObjectHideFlags: 0
