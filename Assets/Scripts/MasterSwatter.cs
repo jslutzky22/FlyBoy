@@ -48,6 +48,20 @@ public class MasterSwatter : MonoBehaviour
     public bool flyBoyMadeItToEvent11;
     [SerializeField] int eventLoss;
 
+    [Header("SwatterText")]
+    [SerializeField] private string event0Text;
+    [SerializeField] private string event1Text;
+    [SerializeField] private string event2Text;
+    [SerializeField] private string event3Text;
+    [SerializeField] private string event4Text;
+    [SerializeField] private string event5Text;
+    [SerializeField] private string event6Text;
+    [SerializeField] private string event7Text;
+    [SerializeField] private string event8Text;
+    [SerializeField] private string event9Text;
+    [SerializeField] private string event10Text;
+    [SerializeField] private string event11Text;
+
     void Start()
     {
         instance = this;
@@ -149,51 +163,51 @@ public class MasterSwatter : MonoBehaviour
         swatterAppears.SetActive(true);
         if (swatterIndex == 0)
         {
-            swatterText.text = "0";
+            swatterText.text = event0Text + "";
         }
         else if (swatterIndex == 1)
         {
-            swatterText.text = "1";
+            swatterText.text = event1Text + "";
         }
         else if (swatterIndex == 2)
         {
-            swatterText.text = "2";
+            swatterText.text = event2Text + "";
         }
         else if (swatterIndex == 3)
         {
-            swatterText.text = "3";
+            swatterText.text = event3Text + "";
         }
         else if (swatterIndex == 4)
         {
-            swatterText.text = "4";
+            swatterText.text = event4Text + "";
         }
         else if (swatterIndex == 5)
         {
-            swatterText.text = "5";
+            swatterText.text = event5Text + "";
         }
         else if (swatterIndex == 6)
         {
-            swatterText.text = "6";
+            swatterText.text = event6Text + "";
         }
         else if (swatterIndex == 7)
         {
-            swatterText.text = "7";
+            swatterText.text = event7Text + "";
         }
         else if (swatterIndex == 8)
         {
-            swatterText.text = "8";
+            swatterText.text = event8Text + "";
         }
         else if (swatterIndex == 9)
         {
-            swatterText.text = "9";
+            swatterText.text = event9Text + "";
         }
         else if (swatterIndex == 10)
         {
-            swatterText.text = "10";
+            swatterText.text = event10Text + "";
         }
         else if (swatterIndex == 11)
         {
-            swatterText.text = "11";
+            swatterText.text = event11Text + "";
         }
         int timer2 = 5;
         while (timer2 > 0)
