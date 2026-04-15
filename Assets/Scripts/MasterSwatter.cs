@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MasterSwatter : MonoBehaviour
 {
+    public static MasterSwatter instance;
+
     [Header("Main Variables")]
     [SerializeField] private float swatterEventSystemTimer;
     private int swatterIndex = 0;
@@ -14,8 +16,8 @@ public class MasterSwatter : MonoBehaviour
     [SerializeField] GameObject pauseUI;
 
     [Header("City Health")]
-    private int cityHealth;
-    private int cityHealAmount;
+    public int cityHealth;
+    [SerializeField] private int cityHealAmount;
 
     [Header("Events")]
     private bool eventActive;
@@ -48,6 +50,7 @@ public class MasterSwatter : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         StartCoroutine(SwatterEventSystem());
         cityHealth = 100;
     }
@@ -209,6 +212,7 @@ public class MasterSwatter : MonoBehaviour
     private void CityHeal()
     {
         cityHealth += cityHealAmount;
+        cityHealth = Mathf.Min(cityHealth, 100);
     }
 
     IEnumerator EventZero()

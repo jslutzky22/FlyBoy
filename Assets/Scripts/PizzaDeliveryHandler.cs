@@ -40,35 +40,34 @@ public class PizzaDeliveryHandler : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Rent bar not set in inspector");
+            Debug.LogWarning("Rent text not set in inspector");
         }
 
-            deliveryPoints = GetComponentsInChildren<DeliveryPointCollision>(true);
+        deliveryPoints = GetComponentsInChildren<DeliveryPointCollision>(true);
+
+        if (maxVisiblePoints == 0)
+        {
+            return;
+        }
 
         for (int i = 0; i < maxVisiblePoints - 1; i++)
         {
             SpawnDeliveryPoint();
         }
 
-        NewDeliveryPointWithDelay();
+        if (transform.childCount > 1)
+        {
+            NewDeliveryPointWithDelay();
+        }
     }
 
     public void NewDeliveryPointWithDelay()
-    {
-        //  spawn immediately when no active points
-        if (ActivePoints == 0)
-        {
-            SpawnDeliveryPoint();
-        }
-        else
-        {
-            StartCoroutine(SpawnDelay());
-        }
-
+    {   
+        StartCoroutine(SpawnDelay());
     }
 
     //  for immediately spawning a delivery point
-    private void SpawnDeliveryPoint()
+    public void SpawnDeliveryPoint()
     {
         int index = Random.Range(0, deliveryPoints.Length);
         if (!deliveryPoints[index].gameObject.activeSelf)
@@ -103,6 +102,8 @@ public class PizzaDeliveryHandler : MonoBehaviour
             rentBar.value = Money;
             rentText.text = "$" + moneyString + "/$" + Rent;
         }
+
+        Timer.instance.winCheck();
     }
 
     // Update is called once per frame

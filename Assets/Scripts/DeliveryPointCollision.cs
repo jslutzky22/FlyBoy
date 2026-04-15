@@ -1,15 +1,24 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeliveryPointCollision : MonoBehaviour
 {
     [SerializeField] private float basePrice;
     [SerializeField] private float timeLimit;
     [SerializeField] private float timer;
+    [SerializeField] private GameObject moneyParticle;
+    [SerializeField] private Slider timerVisual;
+
+    private void Start()
+    {
+        timerVisual.maxValue = timeLimit;
+    }
 
     private void OnEnable()
     {
         timer = timeLimit;
+        timerVisual.value = timer;
         PizzaDeliveryHandler.instance.ActivePoints++;
         StartCoroutine(CountDownTimer());
     }
@@ -27,24 +36,37 @@ public class DeliveryPointCollision : MonoBehaviour
             return;
         }
 
-        other.GetComponent<FlyingController>().MoneyMoneyMoney();
+        //other.GetComponent<FlyingController>().MoneyMoneyMoney();
 
-        PizzaDeliveryHandler.instance.NewDeliveryPointWithDelay();
+        Instantiate(moneyParticle, other.transform.position, Quaternion.identity);
+
+        if (PizzaDeliveryHandler.instance.ActivePoints == 1)
+        {
+            PizzaDeliveryHandler.instance.SpawnDeliveryPoint();
+        }
+        else
+        {
+            PizzaDeliveryHandler.instance.NewDeliveryPointWithDelay();
+        }
 
         gameObject.SetActive(false);
+
+        ArrowPoint.instance.selectedObj = null;
+        ArrowPoint.instance.HideArrow();
+        ArrowPoint.instance.distanceText.text = "No objective selected";
 
         //  not final calculation
         float tipCalculation = basePrice + timer;
         //  penalty can not go below base price
         tipCalculation = Mathf.Max(basePrice,
-                                  (tipCalculation - PizzaQuality.instance.collisionNumber * PizzaQuality.instance.collisionPenalty));
+                                  (tipCalculation - PizzaQuality.instance.collisionPenalty));
         //  rounding to nearest hundredth
         tipCalculation = Mathf.Round(tipCalculation * 100)/100;
 
         Debug.Log("Gained $"+tipCalculation);
         PizzaDeliveryHandler.instance.IncreaseMoney(tipCalculation);
 
-        PizzaQuality.instance.collisionNumber = 0;
+        PizzaQuality.instance.collisionPenalty = 0;
     }
 
     private IEnumerator CountDownTimer()
@@ -52,6 +74,7 @@ public class DeliveryPointCollision : MonoBehaviour
         while (timer > 0 && gameObject.activeSelf)
         {
             timer -= Time.deltaTime;
+            timerVisual.value = timer;
             yield return null;
         }
     }
