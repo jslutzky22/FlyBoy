@@ -48,6 +48,35 @@ public class MasterSwatter : MonoBehaviour
     public bool flyBoyMadeItToEvent11;
     [SerializeField] int eventLoss;
 
+    [Header("SwatterText")]
+    [SerializeField] private string event0Text;
+    [SerializeField] private string event1Text;
+    [SerializeField] private string event2Text;
+    [SerializeField] private string event3Text;
+    [SerializeField] private string event4Text;
+    [SerializeField] private string event5Text;
+    [SerializeField] private string event6Text;
+    [SerializeField] private string event7Text;
+    [SerializeField] private string event8Text;
+    [SerializeField] private string event9Text;
+    [SerializeField] private string event10Text;
+    [SerializeField] private string event11Text;
+
+    [Header("AudioClips")]
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip event0Audio;
+    [SerializeField] private AudioClip event1Audio;
+    [SerializeField] private AudioClip event2Audio;
+    [SerializeField] private AudioClip event3Audio;
+    [SerializeField] private AudioClip event4Audio;
+    [SerializeField] private AudioClip event5Audio;
+    [SerializeField] private AudioClip event6Audio;
+    [SerializeField] private AudioClip event7Audio;
+    [SerializeField] private AudioClip event8Audio;
+    [SerializeField] private AudioClip event9Audio;
+    [SerializeField] private AudioClip event10Audio;
+    [SerializeField] private AudioClip event11Audio;
+
     void Start()
     {
         instance = this;
@@ -149,51 +178,51 @@ public class MasterSwatter : MonoBehaviour
         swatterAppears.SetActive(true);
         if (swatterIndex == 0)
         {
-            swatterText.text = "0";
+            swatterText.text = event0Text + "";
         }
         else if (swatterIndex == 1)
         {
-            swatterText.text = "1";
+            swatterText.text = event1Text + "";
         }
         else if (swatterIndex == 2)
         {
-            swatterText.text = "2";
+            swatterText.text = event2Text + "";
         }
         else if (swatterIndex == 3)
         {
-            swatterText.text = "3";
+            swatterText.text = event3Text + "";
         }
         else if (swatterIndex == 4)
         {
-            swatterText.text = "4";
+            swatterText.text = event4Text + "";
         }
         else if (swatterIndex == 5)
         {
-            swatterText.text = "5";
+            swatterText.text = event5Text + "";
         }
         else if (swatterIndex == 6)
         {
-            swatterText.text = "6";
+            swatterText.text = event6Text + "";
         }
         else if (swatterIndex == 7)
         {
-            swatterText.text = "7";
+            swatterText.text = event7Text + "";
         }
         else if (swatterIndex == 8)
         {
-            swatterText.text = "8";
+            swatterText.text = event8Text + "";
         }
         else if (swatterIndex == 9)
         {
-            swatterText.text = "9";
+            swatterText.text = event9Text + "";
         }
         else if (swatterIndex == 10)
         {
-            swatterText.text = "10";
+            swatterText.text = event10Text + "";
         }
         else if (swatterIndex == 11)
         {
-            swatterText.text = "11";
+            swatterText.text = event11Text + "";
         }
         int timer2 = 5;
         while (timer2 > 0)
@@ -217,6 +246,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventZero()
     {
+        audioSource.PlayOneShot(event0Audio);
         eventZeroObjects[0].SetActive(true);
         if (eventZeroObjects.Length == 2)
         { 
@@ -278,6 +308,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventOne()
     {
+        audioSource.PlayOneShot(event1Audio);
         eventOneObjects[0].SetActive(true);
         if (eventOneObjects.Length == 2)
         {
@@ -339,6 +370,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventTwo()
     {
+        audioSource.PlayOneShot(event2Audio);
         eventTwoObjects[0].SetActive(true);
         if (eventTwoObjects.Length == 2)
         {
@@ -400,6 +432,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventThree()
     {
+        audioSource.PlayOneShot(event3Audio);
         eventThreeObjects[0].SetActive(true);
         if (eventThreeObjects.Length == 2)
         {
@@ -461,6 +494,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventFour()
     {
+        audioSource.PlayOneShot(event4Audio);
         eventFourObjects[0].SetActive(true);
         if (eventFourObjects.Length == 2)
         {
@@ -522,6 +556,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventFive()
     {
+        audioSource.PlayOneShot(event5Audio);
         eventFiveObjects[0].SetActive(true);
         if (eventFiveObjects.Length == 2)
         {
@@ -583,6 +618,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventSix()
     {
+        audioSource.PlayOneShot(event6Audio);
         eventSixObjects[0].SetActive(true);
         if (eventSixObjects.Length == 2)
         {
@@ -644,6 +680,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventSeven()
     {
+        audioSource.PlayOneShot(event7Audio);
         eventSevenObjects[0].SetActive(true);
         if (eventSevenObjects.Length == 2)
         {
@@ -705,6 +742,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventEight()
     {
+        audioSource.PlayOneShot(event8Audio);
         eventEightObjects[0].SetActive(true);
         if (eventEightObjects.Length == 2)
         {
@@ -766,6 +804,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventNine()
     {
+        audioSource.PlayOneShot(event9Audio);
         eventNineObjects[0].SetActive(true);
         if (eventNineObjects.Length == 2)
         {
@@ -827,6 +866,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventTen()
     {
+        audioSource.PlayOneShot(event10Audio);
         eventTenObjects[0].SetActive(true);
         if (eventTenObjects.Length == 2)
         {
@@ -888,6 +928,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventEleven()
     {
+        audioSource.PlayOneShot(event11Audio);
         eventElevenObjects[0].SetActive(true);
         if (eventElevenObjects.Length == 2)
         {
