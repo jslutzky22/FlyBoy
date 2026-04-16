@@ -67,6 +67,9 @@ public class MasterSwatter : MonoBehaviour
 
     [Header("AudioClips")]
     private AudioSource audioSource;
+    [SerializeField] private AudioClip swatterPopUpSound;
+    [SerializeField] private AudioClip swatterComplete;
+    [SerializeField] private AudioClip swatterFail;
     [SerializeField] private AudioClip event0Audio;
     [SerializeField] private AudioClip event1Audio;
     [SerializeField] private AudioClip event2Audio;
@@ -253,17 +256,20 @@ public class MasterSwatter : MonoBehaviour
             }
         }
         swatterAppears.SetActive(false);
+        audioSource.PlayOneShot(swatterPopUpSound);
         approvalRating.SetActive(true);
     }
 
     private void CityHeal()
     {
+        audioSource.PlayOneShot(swatterComplete);
         cityHealth += cityHealAmount;
         cityHealth = Mathf.Min(cityHealth, 100);
     }
 
     IEnumerator EventZero()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event0Audio);
         eventZeroObjects[0].SetActive(true);
         if (eventZeroObjects.Length == 2)
@@ -305,6 +311,7 @@ public class MasterSwatter : MonoBehaviour
             else 
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventZeroObjects[0].SetActive(false);
                 if (eventZeroObjects.Length == 2)
                 {
@@ -318,6 +325,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventZeroObjects[0].SetActive(false);
             if (eventZeroObjects.Length == 2)
             {
@@ -330,6 +338,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventOne()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event1Audio);
         eventOneObjects[0].SetActive(true);
         if (eventOneObjects.Length == 2)
@@ -371,6 +380,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventOneObjects[0].SetActive(false);
                 if (eventOneObjects.Length == 2)
                 {
@@ -384,6 +394,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventOneObjects[0].SetActive(false);
             if (eventOneObjects.Length == 2)
             {
@@ -396,6 +407,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventTwo()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event2Audio);
         eventTwoObjects[0].SetActive(true);
         if (eventTwoObjects.Length == 2)
@@ -437,6 +449,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventTwoObjects[0].SetActive(false);
                 if (eventTwoObjects.Length == 2)
                 {
@@ -450,6 +463,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventTwoObjects[0].SetActive(false);
             if (eventTwoObjects.Length == 2)
             {
@@ -462,6 +476,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventThree()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event3Audio);
         eventThreeObjects[0].SetActive(true);
         if (eventThreeObjects.Length == 2)
@@ -503,6 +518,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventThreeObjects[0].SetActive(false);
                 if (eventThreeObjects.Length == 2)
                 {
@@ -516,6 +532,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventThreeObjects[0].SetActive(false);
             if (eventThreeObjects.Length == 2)
             {
@@ -528,6 +545,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventFour()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event4Audio);
         eventFourObjects[0].SetActive(true);
         if (eventFourObjects.Length == 2)
@@ -569,6 +587,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventFourObjects[0].SetActive(false);
                 if (eventFourObjects.Length == 2)
                 {
@@ -582,6 +601,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventFourObjects[0].SetActive(false);
             if (eventFourObjects.Length == 2)
             {
@@ -594,6 +614,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventFive()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event5Audio);
         eventFiveObjects[0].SetActive(true);
         if (eventFiveObjects.Length == 2)
@@ -635,6 +656,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventFiveObjects[0].SetActive(false);
                 if (eventFiveObjects.Length == 2)
                 {
@@ -648,6 +670,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventFiveObjects[0].SetActive(false);
             if (eventFiveObjects.Length == 2)
             {
@@ -660,6 +683,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventSix()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event6Audio);
         eventSixObjects[0].SetActive(true);
         if (eventSixObjects.Length == 2)
@@ -701,6 +725,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventSixObjects[0].SetActive(false);
                 if (eventSixObjects.Length == 2)
                 {
@@ -714,6 +739,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventSixObjects[0].SetActive(false);
             if (eventSixObjects.Length == 2)
             {
@@ -726,6 +752,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventSeven()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event7Audio);
         eventSevenObjects[0].SetActive(true);
         if (eventSevenObjects.Length == 2)
@@ -767,6 +794,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventSevenObjects[0].SetActive(false);
                 if (eventSevenObjects.Length == 2)
                 {
@@ -780,6 +808,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventSevenObjects[0].SetActive(false);
             if (eventSevenObjects.Length == 2)
             {
@@ -792,6 +821,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventEight()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event8Audio);
         eventEightObjects[0].SetActive(true);
         if (eventEightObjects.Length == 2)
@@ -833,6 +863,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventEightObjects[0].SetActive(false);
                 if (eventEightObjects.Length == 2)
                 {
@@ -846,6 +877,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventEightObjects[0].SetActive(false);
             if (eventEightObjects.Length == 2)
             {
@@ -858,6 +890,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventNine()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event9Audio);
         eventNineObjects[0].SetActive(true);
         if (eventNineObjects.Length == 2)
@@ -899,6 +932,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventNineObjects[0].SetActive(false);
                 if (eventNineObjects.Length == 2)
                 {
@@ -912,6 +946,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventNineObjects[0].SetActive(false);
             if (eventNineObjects.Length == 2)
             {
@@ -924,6 +959,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventTen()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event10Audio);
         eventTenObjects[0].SetActive(true);
         if (eventTenObjects.Length == 2)
@@ -965,6 +1001,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventTenObjects[0].SetActive(false);
                 if (eventTenObjects.Length == 2)
                 {
@@ -978,6 +1015,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventTenObjects[0].SetActive(false);
             if (eventTenObjects.Length == 2)
             {
@@ -990,6 +1028,7 @@ public class MasterSwatter : MonoBehaviour
 
     IEnumerator EventEleven()
     {
+        audioSource.PlayOneShot(swatterPopUpSound);
         audioSource.PlayOneShot(event11Audio);
         eventElevenObjects[0].SetActive(true);
         if (eventElevenObjects.Length == 2)
@@ -1031,6 +1070,7 @@ public class MasterSwatter : MonoBehaviour
             else
             {
                 cityHealth -= eventLoss;
+                audioSource.PlayOneShot(swatterFail);
                 eventElevenObjects[0].SetActive(false);
                 if (eventElevenObjects.Length == 2)
                 {
@@ -1044,6 +1084,7 @@ public class MasterSwatter : MonoBehaviour
         else
         {
             cityHealth -= eventLoss;
+            audioSource.PlayOneShot(swatterFail);
             eventElevenObjects[0].SetActive(false);
             if (eventElevenObjects.Length == 2)
             {
