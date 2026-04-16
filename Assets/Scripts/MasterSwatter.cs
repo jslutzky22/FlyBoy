@@ -81,6 +81,13 @@ public class MasterSwatter : MonoBehaviour
     void Start()
     {
         instance = this;
+        audioSource = GetComponent<AudioSource>();
+
+        for (int i = 0; i < eventTimerVisuals.Length; i++)
+        {
+            eventTimerVisuals[i].maxValue = eventWaitTimer;
+        }
+
         StartCoroutine(SwatterEventSystem());
         cityHealth = 100;
     }

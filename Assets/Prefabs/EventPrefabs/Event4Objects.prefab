@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 3917230417075419818}
   - component: {fileID: 6531038479651515361}
   - component: {fileID: 2479160521461118551}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Event4Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

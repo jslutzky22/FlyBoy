@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 7846617038289299698}
   - component: {fileID: 2245144941843721507}
   - component: {fileID: 3293997713122875723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Event3Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
