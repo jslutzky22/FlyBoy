@@ -345,6 +345,7 @@ MonoBehaviour:
   timer: 0
   moneyParticle: {fileID: 6849734353970219408, guid: db3111a592a39ba41bfbbced703ac126, type: 3}
   timerVisual: {fileID: 4401218284075953314}
+  moneySound: {fileID: 8300000, guid: e01ced2409f1b824f9d24dc081ea7ac1, type: 3}
 --- !u!1 &6199390907602596317
 GameObject:
   m_ObjectHideFlags: 0
