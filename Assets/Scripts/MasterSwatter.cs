@@ -21,6 +21,7 @@ public class MasterSwatter : MonoBehaviour
 
     [Header("Events")]
     private bool eventActive;
+    [SerializeField] private int swatterPopUpLengthInSeconds = 10;
     [SerializeField] private GameObject[] eventZeroObjects;
     [SerializeField] private GameObject[] eventOneObjects;
     [SerializeField] private GameObject[] eventTwoObjects;
@@ -34,6 +35,7 @@ public class MasterSwatter : MonoBehaviour
     [SerializeField] private GameObject[] eventTenObjects;
     [SerializeField] private GameObject[] eventElevenObjects;
     [SerializeField] private int eventWaitTimer;
+    [SerializeField] private Slider[] eventTimerVisuals;
     public bool flyBoyMadeItToEvent0;
     public bool flyBoyMadeItToEvent1;
     public bool flyBoyMadeItToEvent2;
@@ -80,6 +82,13 @@ public class MasterSwatter : MonoBehaviour
     void Start()
     {
         instance = this;
+        audioSource = GetComponent<AudioSource>();
+
+        for (int i = 0; i < eventTimerVisuals.Length; i++)
+        {
+            eventTimerVisuals[i].maxValue = eventWaitTimer;
+        }
+
         StartCoroutine(SwatterEventSystem());
         cityHealth = 100;
     }
@@ -224,7 +233,7 @@ public class MasterSwatter : MonoBehaviour
         {
             swatterText.text = event11Text + "";
         }
-        int timer2 = 5;
+        int timer2 = swatterPopUpLengthInSeconds;
         while (timer2 > 0)
         {
             yield return new WaitForSecondsRealtime(1);
@@ -257,6 +266,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[0].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -264,6 +274,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent0)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -280,6 +291,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent0 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else 
             {
@@ -291,6 +303,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false; 
                 flyBoyMadeItToEvent0 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -319,6 +332,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[1].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -326,6 +340,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent1)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -342,6 +357,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent1 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -353,6 +369,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent1 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -381,6 +398,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[2].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -388,6 +406,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent2)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -404,6 +423,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent2 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -415,6 +435,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent2 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -443,6 +464,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[3].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -450,6 +472,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent3)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -466,6 +489,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent3 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -477,6 +501,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent3 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -505,6 +530,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[4].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -512,6 +538,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent4)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -528,6 +555,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent4 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -539,6 +567,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent4 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -567,6 +596,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[5].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -574,6 +604,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent5)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -590,6 +621,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent5 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -601,6 +633,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent5 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -629,6 +662,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[6].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -636,6 +670,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent6)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -652,6 +687,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent6 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -663,6 +699,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent6 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -691,6 +728,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[7].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -698,6 +736,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent7)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -714,6 +753,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent7 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -725,6 +765,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent7 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -753,6 +794,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[8].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -760,6 +802,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent8)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -776,6 +819,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent8 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -787,6 +831,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent8 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -815,6 +860,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[9].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -822,6 +868,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent9)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -838,6 +885,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent9 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -849,6 +897,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent9 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -877,6 +926,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[10].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -884,6 +934,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent10)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -900,6 +951,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent10 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -911,6 +963,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent10 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else
@@ -939,6 +992,7 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             timer--;
+            eventTimerVisuals[11].value = timer;
             while (pauseUI.activeSelf == true)
             {
                 yield return null;
@@ -946,6 +1000,7 @@ public class MasterSwatter : MonoBehaviour
         }
         if (flyBoyMadeItToEvent11)
         {
+            FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
             while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
             {
@@ -962,6 +1017,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent11 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
             else
             {
@@ -973,6 +1029,7 @@ public class MasterSwatter : MonoBehaviour
                 }
                 eventActive = false;
                 flyBoyMadeItToEvent11 = false;
+                FindFirstObjectByType<FlyingController>().moveSpeed = 15;
             }
         }
         else

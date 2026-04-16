@@ -63,6 +63,8 @@ public class DeliveryPointCollision : MonoBehaviour
         //  rounding to nearest hundredth
         tipCalculation = Mathf.Round(tipCalculation * 100)/100;
 
+        PizzaQuality.instance.DisplayMoney(tipCalculation);
+
         Debug.Log("Gained $"+tipCalculation);
         PizzaDeliveryHandler.instance.IncreaseMoney(tipCalculation);
 
