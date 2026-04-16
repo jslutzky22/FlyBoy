@@ -21,6 +21,7 @@ public class MasterSwatter : MonoBehaviour
 
     [Header("Events")]
     private bool eventActive;
+    [SerializeField] private int swatterPopUpLengthInSeconds = 10;
     [SerializeField] private GameObject[] eventZeroObjects;
     [SerializeField] private GameObject[] eventOneObjects;
     [SerializeField] private GameObject[] eventTwoObjects;
@@ -232,7 +233,7 @@ public class MasterSwatter : MonoBehaviour
         {
             swatterText.text = event11Text + "";
         }
-        int timer2 = 5;
+        int timer2 = swatterPopUpLengthInSeconds;
         while (timer2 > 0)
         {
             yield return new WaitForSecondsRealtime(1);
