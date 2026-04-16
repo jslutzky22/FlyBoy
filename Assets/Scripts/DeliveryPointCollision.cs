@@ -9,6 +9,7 @@ public class DeliveryPointCollision : MonoBehaviour
     [SerializeField] private float timer;
     [SerializeField] private GameObject moneyParticle;
     [SerializeField] private Slider timerVisual;
+    [SerializeField] private AudioClip moneySound;
 
     private void Start()
     {
@@ -39,7 +40,7 @@ public class DeliveryPointCollision : MonoBehaviour
         //other.GetComponent<FlyingController>().MoneyMoneyMoney();
 
         Instantiate(moneyParticle, other.transform.position, Quaternion.identity);
-
+        AudioSource.PlayClipAtPoint(moneySound, transform.position);
         if (PizzaDeliveryHandler.instance.ActivePoints == 1)
         {
             PizzaDeliveryHandler.instance.SpawnDeliveryPoint();

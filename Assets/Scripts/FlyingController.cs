@@ -167,8 +167,10 @@ public class FlyingController : MonoBehaviour
 
     public void MoneyMoneyMoney()
     {
+        //Debug.Log("MoneySoundShouldHavePlayed");
         audioSource.pitch = Random.Range(.80f, 1.20f);
         audioSource.PlayOneShot(money, Random.Range(0.50f, 1));
         Instantiate(moneyParticle, transform.position, Quaternion.identity);
+        //Debug.Log("MoneySoundShouldHavePlayed");
     }
 }
