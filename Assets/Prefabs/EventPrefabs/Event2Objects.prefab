@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 753060058749122709}
   - component: {fileID: 3817722910877156666}
   - component: {fileID: 3465338864108883921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Event2Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

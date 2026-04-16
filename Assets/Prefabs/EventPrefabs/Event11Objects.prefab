@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 2527473124798740955}
   - component: {fileID: 2456886849125010204}
   - component: {fileID: 5718725628468961785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Event11Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
