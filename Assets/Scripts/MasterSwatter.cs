@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MasterSwatter : MonoBehaviour
@@ -91,6 +92,14 @@ public class MasterSwatter : MonoBehaviour
 
         StartCoroutine(SwatterEventSystem());
         cityHealth = 100;
+    }
+
+    private void Update()
+    {
+        if (cityHealth <= 0)
+        {
+            SceneManager.LoadScene("Lose");
+        }
     }
 
     IEnumerator SwatterEventSystem()
