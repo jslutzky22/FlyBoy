@@ -2179,6 +2179,7 @@ MonoBehaviour:
   pauseUI: {fileID: 7690754447646448609}
   cityHealth: 0
   cityHealAmount: 0
+  swatterPopUpLengthInSeconds: 10
   eventZeroObjects:
   - {fileID: 0}
   eventOneObjects:
@@ -2237,6 +2238,9 @@ MonoBehaviour:
   event9Text: 
   event10Text: 
   event11Text: 
+  swatterPopUpSound: {fileID: 8300000, guid: 46da2ecd0cbe222458353750d7864b22, type: 3}
+  swatterComplete: {fileID: 8300000, guid: 02c914c1a094cea41859f2c4ca837f21, type: 3}
+  swatterFail: {fileID: 8300000, guid: 30783a19c8e9db845865d03efca109bc, type: 3}
   event0Audio: {fileID: 0}
   event1Audio: {fileID: 0}
   event2Audio: {fileID: 0}
