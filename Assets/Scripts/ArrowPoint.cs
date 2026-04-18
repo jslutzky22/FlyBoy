@@ -9,12 +9,16 @@ public class ArrowPoint : MonoBehaviour
     private Transform playerTransform;
     public TMP_Text distanceText;
     private Transform arrow;
+    private MeshRenderer arrowMeshRenderer;
+    [SerializeField] private Material greenMaterial;
+    [SerializeField] private Material redMaterial;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         instance = this;
         arrow = transform.GetChild(0);
+        arrowMeshRenderer = arrow.GetComponentInChildren<MeshRenderer>();
         playerTransform = FindFirstObjectByType<FlyingController>().transform;
     }
 
@@ -30,11 +34,22 @@ public class ArrowPoint : MonoBehaviour
 
     public void DisplayArrow()
     {
-        arrow.gameObject.SetActive(true);
+        if (selectedObj.GetComponent<DeliveryPointCollision>())
+        {
+            arrowMeshRenderer.material = greenMaterial;
+        }
+        else
+        {
+            arrowMeshRenderer.material = redMaterial;
+        }
+
+            arrow.gameObject.SetActive(true);
     }
 
     public void HideArrow()
     {
+        selectedObj = null;
         arrow.gameObject.SetActive(false);
+        ArrowPoint.instance.distanceText.text = "No objective selected";
     }
 }

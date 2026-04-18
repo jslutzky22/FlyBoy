@@ -334,6 +334,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent0 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventOne()
@@ -403,6 +404,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent1 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventTwo()
@@ -472,6 +474,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent2 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventThree()
@@ -541,6 +544,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent3 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventFour()
@@ -610,6 +614,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent4 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventFive()
@@ -679,6 +684,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent5 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventSix()
@@ -748,6 +754,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent6 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventSeven()
@@ -817,6 +824,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent7 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventEight()
@@ -886,6 +894,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent8 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventNine()
@@ -955,6 +964,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent9 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventTen()
@@ -1024,6 +1034,7 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent10 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 
     IEnumerator EventEleven()
@@ -1093,5 +1104,6 @@ public class MasterSwatter : MonoBehaviour
             eventActive = false;
             flyBoyMadeItToEvent11 = false;
         }
+        ArrowPoint.instance.HideArrow();
     }
 }

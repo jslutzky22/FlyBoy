@@ -80,6 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArrowPoint
   selectedObj: {fileID: 0}
   distanceText: {fileID: 1973644668194892789}
+  greenMaterial: {fileID: 2100000, guid: cf0f785c4f262044c8d13b9d4162165e, type: 2}
+  redMaterial: {fileID: -876546973899608171, guid: 4d600417f238b1544bdceca245be1f59, type: 3}
 --- !u!1 &401370666168390211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2161,7 +2163,7 @@ Transform:
   m_GameObject: {fileID: 8200120884754558396}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09687134, y: 0.26046082, z: -0.026275566, w: 0.96025294}
-  m_LocalPosition: {x: 23.334232, y: 6.2245893, z: -153.74579}
+  m_LocalPosition: {x: 44.207542, y: 6.2245893, z: -126.43468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
