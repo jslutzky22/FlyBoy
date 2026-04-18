@@ -52,9 +52,7 @@ public class DeliveryPointCollision : MonoBehaviour
 
         gameObject.SetActive(false);
 
-        ArrowPoint.instance.selectedObj = null;
         ArrowPoint.instance.HideArrow();
-        ArrowPoint.instance.distanceText.text = "No objective selected";
 
         //  not final calculation
         float tipCalculation = basePrice + timer;

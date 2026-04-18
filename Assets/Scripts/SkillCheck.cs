@@ -53,6 +53,7 @@ public class SkillCheck : MonoBehaviour
             hitIndicator.transform.eulerAngles.z < successZone.transform.eulerAngles.z + 26 && skillCheckActive)
         {
             hit = true;
+            ArrowPoint.instance.HideArrow();
         }
         else if (skillCheckActive)
         {
