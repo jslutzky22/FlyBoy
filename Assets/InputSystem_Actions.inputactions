@@ -25,6 +25,42 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "MoveLeftStopped",
+                    "type": "Button",
+                    "id": "2f8e9fd0-54a6-4c27-a79b-bec5d160b1f8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveRightStopped",
+                    "type": "Button",
+                    "id": "aedaef7d-0b18-4a84-b729-58c7a5779638",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GoUpStop",
+                    "type": "Button",
+                    "id": "1694171d-6ea3-4f97-b87c-b2a29e50cdfd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GoDownStop",
+                    "type": "Button",
+                    "id": "b3d8748c-c9e4-47e9-8ef2-a6451df77020",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "HyperSpeed",
                     "type": "Button",
                     "id": "a677803c-9c53-444a-b43c-160336fecb78",
@@ -55,6 +91,42 @@
                     "name": "FlyVision",
                     "type": "Button",
                     "id": "d74cd5b4-e8c9-4590-a423-9289d18fa91e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveLeft",
+                    "type": "Button",
+                    "id": "d122ee1a-849b-492c-9f25-6349cf35c51c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveRight",
+                    "type": "Button",
+                    "id": "e86bfe08-fc19-48ac-b7ef-7b16adf09813",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GoUp",
+                    "type": "Button",
+                    "id": "51500f26-d9c3-4fd8-b43c-d0ab5eb91195",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GoDown",
+                    "type": "Button",
+                    "id": "2200c36e-64b3-4bca-b77c-59506de96ece",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -103,6 +175,72 @@
                     "processors": "",
                     "groups": "",
                     "action": "MovingStopped",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f40be4a-7066-4e39-bba5-d8f5f99c5320",
+                    "path": "<Keyboard>/a",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLeftStopped",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20d28dbe-6d5f-4475-9828-2203f9b90981",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLeftStopped",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9ec02614-2e68-431c-93d8-ea654516d833",
+                    "path": "<Keyboard>/d",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRightStopped",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "679bb042-6aa8-490e-b24a-f0a4f5643e2a",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRightStopped",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1322a993-32ba-4566-ae6e-bfd02c9cf312",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoUpStop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "004681d6-e312-4b10-ac38-85c0606eefbd",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoDownStop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -180,6 +318,116 @@
                     "processors": "",
                     "groups": "",
                     "action": "FlyVision",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59932cf6-c06f-4c15-9049-1133fa1705d9",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8636dbcc-4d20-4e91-8dfc-3988097fddec",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ffd7406-beca-4d74-9d75-b230c34ed8db",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "54bb9ad3-b7f9-4011-8ecb-7fc1f96295a0",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d60ce6b-c0cc-4441-a772-8d9aa5e85c28",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "165008a4-0137-4792-a4b3-e2195a2986e1",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22d500cb-5255-4e3f-8f7b-aed7a9592d0f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "071f3dc9-2885-4f43-8d93-4e5b89741f51",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85aac57a-dd9c-4e70-a0cd-5bf1a43597b1",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "719d2ccd-55a4-4052-96ff-e2a88c5bdd9a",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

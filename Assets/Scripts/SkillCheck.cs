@@ -27,14 +27,14 @@ public class SkillCheck : MonoBehaviour
     {
         while (!hit)
         {
-            yield return null;
+            yield return new WaitForSeconds(0.005f);
             hitIndicator.transform.eulerAngles = new Vector4(hitIndicator.transform.eulerAngles.x, hitIndicator.transform.eulerAngles.y,
                 hitIndicator.transform.eulerAngles.z + 2, hitIndicator.transform.rotation.w);
             if (miss)
             {
                 hitIndicator.GetComponentInChildren<Image>().color = Color.red;
                 successZone.GetComponentInChildren<Image>().color = Color.red;
-                yield return new WaitForSecondsRealtime(1f);
+                yield return new WaitForSeconds(1f);
                 hitIndicator.GetComponentInChildren<Image>().color = Color.white;
                 successZone.GetComponentInChildren<Image>().color = Color.white;
                 miss = false;

@@ -14,6 +14,10 @@ public class FlyingController : MonoBehaviour
     public Camera playerCamera;
     public float currentHeight;
     private bool moving = false;
+    private bool movingLeft = false;
+    private bool movingRight = false;
+    private bool movingUp = false;
+    private bool movingDown = false;
 
     private float xRotation;
     private float zRotation;
@@ -49,15 +53,34 @@ public class FlyingController : MonoBehaviour
         xRotation = playerCamera.transform.eulerAngles.x;
         zRotation = playerCamera.transform.eulerAngles.z;
 
-        if (moving)
+        if (moving || movingLeft || movingRight)
         {
-            MoveCharacter();
+            if (moving)
+            {
+                MoveCharacter();
+            }
+            if (movingLeft)
+            {
+                MoveCharacterLeft();
+            }
+            if (movingRight) 
+            {
+                MoveCharacterRight();
+            }
         }
         else
         {
             DisableMovement();
         }
 
+        if (movingUp)
+        {
+            rb.AddForce(new Vector3(0, 50, 0));
+        }
+        if (movingDown)
+        {
+            rb.AddForce(new Vector3(0, -50, 0));
+        }
         rb.linearVelocity = rb.linearVelocity * .95f;
         if (transform.position.y < minFloatHeight)
         {
@@ -95,6 +118,46 @@ public class FlyingController : MonoBehaviour
         }
     }
 
+    private void MoveCharacterLeft()
+    {
+        animator.SetBool("FlyingAnimation", true);
+        Vector3 cameraForward = new Vector3(playerCamera.transform.forward.x, 0, playerCamera.transform.forward.z);
+        transform.rotation = Quaternion.LookRotation(cameraForward);
+        transform.Rotate(new Vector3(xRotation, 0, zRotation), Space.Self);
+
+        Vector3 forward = -playerCamera.transform.right;
+        Vector3 flyDirection = forward.normalized;
+
+        if (hyperSpeeding)
+        {
+            rb.AddForce(flyDirection * moveSpeed * Time.deltaTime * 200 * hyperSpeedMultiplier);
+        }
+        else
+        {
+            rb.AddForce(flyDirection * moveSpeed * Time.deltaTime * 200);
+        }
+    }
+
+    private void MoveCharacterRight()
+    {
+        animator.SetBool("FlyingAnimation", true);
+        Vector3 cameraForward = new Vector3(playerCamera.transform.forward.x, 0, playerCamera.transform.forward.z);
+        transform.rotation = Quaternion.LookRotation(cameraForward);
+        transform.Rotate(new Vector3(xRotation, 0, zRotation), Space.Self);
+
+        Vector3 forward = playerCamera.transform.right;
+        Vector3 flyDirection = forward.normalized;
+
+        if (hyperSpeeding)
+        {
+            rb.AddForce(flyDirection * moveSpeed * Time.deltaTime * 200 * hyperSpeedMultiplier);
+        }
+        else
+        {
+            rb.AddForce(flyDirection * moveSpeed * Time.deltaTime * 200);
+        }
+    }
+
     private void DisableMovement()
     {
         animator.SetBool("FlyingAnimation", false);
@@ -109,6 +172,46 @@ public class FlyingController : MonoBehaviour
     public void OnMovingStopped()
     {
         moving = false;
+    }
+
+    public void OnMoveLeft()
+    {
+        movingLeft = true;
+    }
+
+    public void OnMoveLeftStopped()
+    {
+        movingLeft = false;
+    }
+
+    public void OnMoveRight()
+    {
+        movingRight = true;
+    }
+
+    public void OnMoveRightStopped()
+    {
+        movingRight = false;
+    }
+
+    public void OnGoUp()
+    {
+        movingUp = true;
+    }
+
+    public void OnGoUpStop()
+    {
+        movingUp = false;
+    }
+
+    public void OnGoDown()
+    {
+        movingDown = true;
+    }
+
+    public void OnGoDownStop()
+    {
+        movingDown = false;
     }
 
     public void OnHyperSpeed()
