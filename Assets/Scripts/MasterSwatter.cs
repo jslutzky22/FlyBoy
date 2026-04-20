@@ -110,7 +110,7 @@ public class MasterSwatter : MonoBehaviour
         float timer = swatterEventSystemTimer;
         while (timer > 0)
         {
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSeconds(1);
             timer--;
             while (pauseUI.activeSelf == true)
             {
@@ -248,7 +248,7 @@ public class MasterSwatter : MonoBehaviour
         int timer2 = swatterPopUpLengthInSeconds;
         while (timer2 > 0)
         {
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSeconds(1);
             timer2--;
             while (pauseUI.activeSelf == true)
             {
@@ -279,7 +279,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent0)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);   
             timer--;
             eventTimerVisuals[0].value = timer;
             while (pauseUI.activeSelf == true)
@@ -349,7 +349,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent1)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[1].value = timer;
             while (pauseUI.activeSelf == true)
@@ -419,7 +419,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent2)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[2].value = timer;
             while (pauseUI.activeSelf == true)
@@ -489,7 +489,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent3)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[3].value = timer;
             while (pauseUI.activeSelf == true)
@@ -559,7 +559,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent4)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[4].value = timer;
             while (pauseUI.activeSelf == true)
@@ -629,7 +629,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent5)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[5].value = timer;
             while (pauseUI.activeSelf == true)
@@ -699,7 +699,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent6)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[6].value = timer;
             while (pauseUI.activeSelf == true)
@@ -769,7 +769,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent7)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[7].value = timer;
             while (pauseUI.activeSelf == true)
@@ -839,7 +839,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent8)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[8].value = timer;
             while (pauseUI.activeSelf == true)
@@ -909,7 +909,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent9)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[9].value = timer;
             while (pauseUI.activeSelf == true)
@@ -979,7 +979,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent10)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[10].value = timer;
             while (pauseUI.activeSelf == true)
@@ -1049,7 +1049,7 @@ public class MasterSwatter : MonoBehaviour
         int timer = eventWaitTimer;
         while (timer > 0 && !flyBoyMadeItToEvent11)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
             timer--;
             eventTimerVisuals[11].value = timer;
             while (pauseUI.activeSelf == true)
