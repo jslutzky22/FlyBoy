@@ -10,10 +10,14 @@ public class DeliveryPointCollision : MonoBehaviour
     [SerializeField] private GameObject moneyParticle;
     [SerializeField] private Slider timerVisual;
     [SerializeField] private AudioClip moneySound;
+    private ParticleSystem moneyParticles;
 
     private void Start()
     {
         timerVisual.maxValue = timeLimit;
+        moneyParticles = GetComponentInChildren<ParticleSystem>();
+        moneyParticles.transform.parent = null;
+        moneyParticles.transform.localScale = Vector3.one;
     }
 
     private void OnEnable()
@@ -39,7 +43,8 @@ public class DeliveryPointCollision : MonoBehaviour
 
         //other.GetComponent<FlyingController>().MoneyMoneyMoney();
 
-        Instantiate(moneyParticle, other.transform.position, Quaternion.identity);
+        moneyParticles.Play();
+
         AudioSource.PlayClipAtPoint(moneySound, transform.position);
         if (PizzaDeliveryHandler.instance.ActivePoints == 1)
         {
