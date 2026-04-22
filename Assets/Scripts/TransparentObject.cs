@@ -5,6 +5,7 @@ public class TransparentObject : MonoBehaviour
     public Material solid;
     public Material transparent;
     private MeshRenderer meshRenderer;
+    public bool workAround;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +21,25 @@ public class TransparentObject : MonoBehaviour
 
     public void Solid()
     {
-        meshRenderer.material = solid;
+        if (workAround)
+        {
+            meshRenderer.enabled = true;
+        }
+        else
+        {
+            meshRenderer.material = solid;
+        }
     }
 
     public void SemiSolid()
     {
-        meshRenderer.material = transparent;
+        if (workAround)
+        {
+            meshRenderer.enabled = false;
+        }
+        else
+        {
+            meshRenderer.material = transparent;
+        }
     }
 }

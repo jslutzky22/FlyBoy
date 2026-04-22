@@ -18,6 +18,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private int winIndex;
     [SerializeField] private int loseIndex;
+    [SerializeField] private bool tutorialLevel;
 
     private void Start()
     {
@@ -27,7 +28,10 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        timerCountdown();
+        if (!tutorialLevel)
+        {
+            timerCountdown();
+        }
     }
 
     private void timerCountdown()
@@ -54,7 +58,7 @@ public class Timer : MonoBehaviour
 
     public void winCheck()
     {
-        if(PizzaDeliveryHandler.instance.Money >= PizzaDeliveryHandler.instance.Rent)
+        if(PizzaDeliveryHandler.instance.Money >= PizzaDeliveryHandler.instance.Rent && !tutorialLevel)
         {
             SceneManager.LoadScene(winIndex);
         }
