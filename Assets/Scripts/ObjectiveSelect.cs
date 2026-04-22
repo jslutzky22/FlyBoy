@@ -1,10 +1,13 @@
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class ObjectiveSelect : MonoBehaviour
 {
+    public static ObjectiveSelect instance;
+
     private InputAction flyVision;
     public static bool flyVisionEnabled;
     [SerializeField][Range(0, 1)] private float slowDownScale;
@@ -26,15 +29,21 @@ public class ObjectiveSelect : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
         player = FindFirstObjectByType<FlyingController>();
         flyVision = InputSystem.actions.FindAction("FlyVision");
 
         flyVision.performed += FlyVision;
-        flyVision.canceled += FlyVisionCanceled;
+        flyVision.canceled += FlyVisionInputCanceled;
     }
 
     private void FlyVision(InputAction.CallbackContext obj)
     {
+        if (PauseScript.gamePaused)
+        {
+            return;
+        }
+
         flyVisionEnabled = true;
         //Debug.Log("vision");
         Time.timeScale = slowDownScale;
@@ -48,7 +57,17 @@ public class ObjectiveSelect : MonoBehaviour
         }
     }
 
-    private void FlyVisionCanceled(InputAction.CallbackContext obj)
+    private void FlyVisionInputCanceled(InputAction.CallbackContext obj)
+    {
+        if (PauseScript.gamePaused)
+        {
+            return;
+        }
+
+        FlyVisionCanceled();
+    }
+
+    public void FlyVisionCanceled()
     {
         reticle.color = reticleColor.normal;
         flyVisionEnabled = false;
@@ -73,7 +92,7 @@ public class ObjectiveSelect : MonoBehaviour
     private void OnDestroy()
     {
         flyVision.performed -= FlyVision;
-        flyVision.canceled -= FlyVisionCanceled;
+        flyVision.canceled -= FlyVisionInputCanceled;
     }
 
     // Update is called once per frame
