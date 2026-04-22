@@ -203889,6 +203889,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4579461397024607537, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: eventLoss
       value: 25
@@ -204156,6 +204160,10 @@ PrefabInstance:
     - target: {fileID: 6811476917573921004, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: m_Name
       value: CanvasUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297243166225214561, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9070485170495056165, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: timeLimit.minutes
