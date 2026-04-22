@@ -73,11 +73,11 @@ public class FlyingController : MonoBehaviour
             DisableMovement();
         }
 
-        if (movingUp)
+        if (movingUp && moveSpeed != 0)
         {
             rb.AddForce(new Vector3(0, 50, 0));
         }
-        if (movingDown)
+        if (movingDown && moveSpeed != 0)
         {
             rb.AddForce(new Vector3(0, -50, 0));
         }
