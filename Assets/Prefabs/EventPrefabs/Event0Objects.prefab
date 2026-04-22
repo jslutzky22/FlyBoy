@@ -405,10 +405,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventUI
       objectReference: {fileID: 0}
-    - target: {fileID: 5462935048034572593, guid: 9fd13124d37c73d4795b7bc2f4d820de, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
