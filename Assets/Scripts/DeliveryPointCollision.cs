@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class DeliveryPointCollision : MonoBehaviour
     [SerializeField] private Slider timerVisual;
     [SerializeField] private AudioClip moneySound;
     private ParticleSystem moneyParticles;
+    [SerializeField] private TMP_Text moneyEstimate;
 
     private void Start()
     {
@@ -81,7 +83,21 @@ public class DeliveryPointCollision : MonoBehaviour
         {
             timer -= Time.deltaTime;
             timerVisual.value = timer;
-            yield return null;
+
+            if (timer >= (2*timeLimit/3))
+            {
+                moneyEstimate.text = "$$$";
+            }
+            else if(timer > timeLimit / 3)
+            {
+                moneyEstimate.text = "$$";
+            }
+            else
+            {
+                moneyEstimate.text = "$";
+            }
+
+                yield return null;
         }
     }
 

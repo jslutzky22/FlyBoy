@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -10,8 +11,11 @@ public class PauseScript : MonoBehaviour
 
     private GameObject pauseUI;
 
+    private CinemachineInputAxisController camInput;
+
     private void Awake()
     {
+        camInput = FindFirstObjectByType<CinemachineInputAxisController>();
         pause = InputSystem.actions.FindAction("Pause");
         pause.performed += PauseInput;
 
@@ -44,10 +48,12 @@ public class PauseScript : MonoBehaviour
 
             //  jank fix but it works
             ObjectiveSelect.instance.FlyVisionCanceled();
+            camInput.IgnoreTimeScale = true;
         }
         else
         {
             print("PAUSED");
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
@@ -55,6 +61,7 @@ public class PauseScript : MonoBehaviour
             gamePaused = true;
 
             pauseUI.SetActive(true);
+            camInput.IgnoreTimeScale = false;
         }
     }
 
