@@ -167,6 +167,7 @@ MonoBehaviour:
   timerText: {fileID: 0}
   winIndex: 3
   loseIndex: 2
+  tutorialLevel: 0
 --- !u!1 &749583202690644187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,7 +2531,6 @@ RectTransform:
   - {fileID: 5531077354141630614}
   - {fileID: 2721762341152648721}
   - {fileID: 7221870786689180015}
-  - {fileID: 6943582657720844922}
   - {fileID: 5163262773631220451}
   - {fileID: 4615361664797200836}
   - {fileID: 7356318370745566049}
@@ -2624,6 +2624,7 @@ MonoBehaviour:
   swatterAppears: {fileID: 5280410024906387194}
   swatterText: {fileID: 2124888770216982864}
   pauseUI: {fileID: 7690754447646448609}
+  tutorialLevel: 0
   cityHealth: 0
   cityHealAmount: 0
   swatterPopUpLengthInSeconds: 10
@@ -2902,11 +2903,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2903179223917612821}
+  m_Father: {fileID: 3701342636687379636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -736.3961, y: -360.80035}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 259.3007, y: 131.8232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2365110584023779952
@@ -3437,6 +3438,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6943582657720844922}
   - {fileID: 9146924002931861332}
   - {fileID: 4892438574488142107}
   - {fileID: 6648406890748836702}

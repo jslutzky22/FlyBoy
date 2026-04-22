@@ -15,6 +15,7 @@ public class MasterSwatter : MonoBehaviour
     [SerializeField] GameObject swatterAppears;
     [SerializeField] TMP_Text swatterText;
     [SerializeField] GameObject pauseUI;
+    [SerializeField] private bool tutorialLevel;
 
     [Header("City Health")]
     public int cityHealth;
@@ -99,7 +100,7 @@ public class MasterSwatter : MonoBehaviour
 
     private void Update()
     {
-        if (cityHealth <= 0)
+        if (cityHealth <= 0 && !tutorialLevel)
         {
             SceneManager.LoadScene("Lose");
         }
