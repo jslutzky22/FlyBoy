@@ -11,6 +11,7 @@ public class SkillCheck : MonoBehaviour
     private bool hit;
     private bool miss;
     public bool skillCheckHit;
+    [SerializeField] private int skillCheckSpinSpeed;
 
     public void SkillCheckActivate()
     {
@@ -29,7 +30,7 @@ public class SkillCheck : MonoBehaviour
         {
             yield return new WaitForSeconds(0.005f);
             hitIndicator.transform.eulerAngles = new Vector4(hitIndicator.transform.eulerAngles.x, hitIndicator.transform.eulerAngles.y,
-                hitIndicator.transform.eulerAngles.z + 2, hitIndicator.transform.rotation.w);
+                hitIndicator.transform.eulerAngles.z + skillCheckSpinSpeed * Time.deltaTime, hitIndicator.transform.rotation.w);
             if (miss)
             {
                 hitIndicator.GetComponentInChildren<Image>().color = Color.red;

@@ -59,6 +59,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e07c04491c710c46b001e5b6d743ed5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3549943572385626369}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e07c04491c710c46b001e5b6d743ed5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7921814481480087320}
   m_SourcePrefab: {fileID: 100100000, guid: 6e07c04491c710c46b001e5b6d743ed5, type: 3}
 --- !u!1 &1034777680530464166 stripped
 GameObject:
@@ -87,3 +90,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8344994255892697914, guid: 6e07c04491c710c46b001e5b6d743ed5, type: 3}
+--- !u!114 &-7921814481480087320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034777680530464166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08d12b9cf9e1034691e8bcc470421ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TransparentObject
+  solid: {fileID: 0}
+  transparent: {fileID: 2100000, guid: 68c4d7fc9f6c63a4a9763df35e61981a, type: 2}
+  workAround: 1

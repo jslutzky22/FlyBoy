@@ -842,6 +842,7 @@ MonoBehaviour:
   successZone: {fileID: 7297243166225214561}
   skillCheckActive: 0
   skillCheckHit: 0
+  skillCheckSpinSpeed: 500
 --- !u!1 &2478199416684576140
 GameObject:
   m_ObjectHideFlags: 0
