@@ -11,6 +11,7 @@ public class MasterSwatter : MonoBehaviour
     [Header("Main Variables")]
     [SerializeField] private float swatterEventSystemTimer;
     private int swatterIndex = 0;
+    private int lastEvent;
     [SerializeField] GameObject approvalRating;
     [SerializeField] GameObject swatterAppears;
     [SerializeField] TMP_Text swatterText;
@@ -119,6 +120,11 @@ public class MasterSwatter : MonoBehaviour
             }
         }
         swatterIndex = Random.Range(0, 12);
+        while (swatterIndex == lastEvent)
+        {
+            swatterIndex = Random.Range(0, 12);
+        }
+        lastEvent = swatterIndex;
         if (swatterIndex == 0)
         {
             eventActive = true;
