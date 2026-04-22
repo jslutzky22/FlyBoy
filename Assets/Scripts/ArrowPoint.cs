@@ -34,7 +34,7 @@ public class ArrowPoint : MonoBehaviour
 
     public void DisplayArrow()
     {
-        if (selectedObj.GetComponent<DeliveryPointCollision>())
+        if (selectedObj.parent.GetComponent<DeliveryPointCollision>())
         {
             arrowMeshRenderer.material = greenMaterial;
         }

@@ -41,6 +41,9 @@ public class PauseScript : MonoBehaviour
             gamePaused = false;
 
             pauseUI.SetActive(false);
+
+            //  jank fix but it works
+            ObjectiveSelect.instance.FlyVisionCanceled();
         }
         else
         {
