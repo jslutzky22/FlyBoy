@@ -95641,20 +95641,20 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5e28c63675e4ff74a800b05b4525a29a, type: 3}
+  m_Resource: {fileID: 8300000, guid: 85bfbb6b5fa481248807a2ffea3e6c34, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -95662,23 +95662,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.65002394
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -1.0204082
+      outSlope: -1.0204082
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -95687,7 +95687,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -203049,7 +203049,7 @@ PrefabInstance:
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event0Audio
       value: 
-      objectReference: {fileID: 8300000, guid: d9b6104eca320454b8584e0689186957, type: 3}
+      objectReference: {fileID: 8300000, guid: bf49fddfd69475f4a9b15d667ddaa2d8, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event10Text
       value: FLY BOY! I littered! Give it a few thousand years and the microplastics
@@ -203063,47 +203063,47 @@ PrefabInstance:
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event1Audio
       value: 
-      objectReference: {fileID: 8300000, guid: edf7e905459149d4dad42f449880ab26, type: 3}
+      objectReference: {fileID: 8300000, guid: dd3ca7a41984fcb429d9c71b7457e677, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event2Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 017cff1a2a995034c9b672d6684be4f6, type: 3}
+      objectReference: {fileID: 8300000, guid: 385380a27051f274bb59bc0d6877a564, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event3Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 254c0855bca1e9941ac657d0fd792510, type: 3}
+      objectReference: {fileID: 8300000, guid: 099b709d6d0154b428c7ade58535bbab, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event4Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 7ecdb7490f40d29418ceed26b9285ebb, type: 3}
+      objectReference: {fileID: 8300000, guid: f443bfbe1bdac2e4a9e2a8672be06b6f, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event5Audio
       value: 
-      objectReference: {fileID: 8300000, guid: d00494d5d86d7f844afb943b4be7d80a, type: 3}
+      objectReference: {fileID: 8300000, guid: 448133386f211c14a987c5c325c5aef9, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event6Audio
       value: 
-      objectReference: {fileID: 8300000, guid: a4bbdce2679ac4e4fbf33f5d851d1cbe, type: 3}
+      objectReference: {fileID: 8300000, guid: 3b7fa5eb67390e54ca81f63c4ab80855, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event7Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 26d6776ada79238418f4eb3ae3d9af4f, type: 3}
+      objectReference: {fileID: 8300000, guid: f43186a0a51594949a2e604a455c8b24, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event8Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 1de349f00428c7344b59442c2845e16c, type: 3}
+      objectReference: {fileID: 8300000, guid: cc00cac8e31c6954d8de81888c15ae37, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event9Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 1ea6f66f9b9bff247bc7c71158c22daf, type: 3}
+      objectReference: {fileID: 8300000, guid: e1dcac878b1dd0a47b68962ede12f56e, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event10Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 776cf110320dff04fad0b5c8ad04ebca, type: 3}
+      objectReference: {fileID: 8300000, guid: 83766f85032c1e349bdf910e96324a1f, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: event11Audio
       value: 
-      objectReference: {fileID: 8300000, guid: db67983608b5a64459128623b83085a7, type: 3}
+      objectReference: {fileID: 8300000, guid: 10354479b646d6a4880c60f2c873ff42, type: 3}
     - target: {fileID: 5829672375481641816, guid: 324bd770aa516d549b08a15b51efca06, type: 3}
       propertyPath: eventWaitTimer
       value: 30
@@ -236927,7 +236927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2607192655333904857, guid: 523667ee0e885af46a66a2f37c98df10, type: 3}
       propertyPath: m_Volume
-      value: 0.25
+      value: 0.211
       objectReference: {fileID: 0}
     - target: {fileID: 3116265227532819536, guid: 523667ee0e885af46a66a2f37c98df10, type: 3}
       propertyPath: m_Name
@@ -236935,7 +236935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5772048975205259351, guid: 523667ee0e885af46a66a2f37c98df10, type: 3}
       propertyPath: m_Volume
-      value: 0.15
+      value: 0.211
       objectReference: {fileID: 0}
     - target: {fileID: 5772048975205259351, guid: 523667ee0e885af46a66a2f37c98df10, type: 3}
       propertyPath: m_Enabled
