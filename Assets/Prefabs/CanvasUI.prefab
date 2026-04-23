@@ -166,6 +166,7 @@ MonoBehaviour:
   timerText: {fileID: 0}
   winIndex: 3
   loseIndex: 2
+  tutorialLevel: 0
 --- !u!1 &749583202690644187
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +842,7 @@ MonoBehaviour:
   successZone: {fileID: 7297243166225214561}
   skillCheckActive: 0
   skillCheckHit: 0
+  skillCheckSpinSpeed: 0
 --- !u!1 &2478199416684576140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,6 +2547,7 @@ MonoBehaviour:
   swatterAppears: {fileID: 5280410024906387194}
   swatterText: {fileID: 2124888770216982864}
   pauseUI: {fileID: 7690754447646448609}
+  tutorialLevel: 0
   cityHealth: 0
   cityHealAmount: 0
   swatterPopUpLengthInSeconds: 10
