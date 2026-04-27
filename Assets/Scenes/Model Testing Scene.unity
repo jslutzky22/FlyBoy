@@ -409,7 +409,7 @@ Cloth:
   - {fileID: 4564315192544919863}
   - {fileID: 8471609457127156088}
   - {fileID: 6513723849639367281}
-  - {fileID: 3220863564057941234}
+  - {fileID: 0}
   - {fileID: 3469287837362568410}
   m_SphereColliders: []
   m_SelfCollisionDistance: 0
@@ -815,7 +815,7 @@ Cloth:
   - {fileID: 4564315192544919863}
   - {fileID: 8471609457127156088}
   - {fileID: 6513723849639367281}
-  - {fileID: 3220863564057941234}
+  - {fileID: 0}
   - {fileID: 3469287837362568410}
   - {fileID: 5943056678111590008}
   - {fileID: 9210658976626987690}
@@ -2398,7 +2398,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1398618388854815548}
   - component: {fileID: 3220863564057941233}
-  - component: {fileID: 3220863564057941234}
   m_Layer: 0
   m_Name: Cube.008
   m_TagString: Untagged
@@ -4233,29 +4232,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.10612945, y: 0.053991728, z: -0.013160448}
     m_Extent: {x: 0.017064422, y: 0.014271982, z: 0.013446194}
   m_DirtyAABB: 0
---- !u!136 &3220863564057941234
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 281855665431212659}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.0064892024
-  m_Height: 0.0407593
-  m_Direction: 1
-  m_Center: {x: 0.0018492541, y: 0.012932522, z: 0.0013748492}
 --- !u!1 &3291190919118636686
 GameObject:
   m_ObjectHideFlags: 0
