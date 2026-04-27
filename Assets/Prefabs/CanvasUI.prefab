@@ -841,7 +841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillCheck
   hitIndicator: {fileID: 2829660937888710399}
   successZone: {fileID: 8081780883472975794}
-  skillCheckUI: {fileID: 0}
+  skillCheckUI: {fileID: 8183007587614421099}
   skillCheckActive: 0
   skillCheckHit: 0
   skillCheckSpinSpeed: 0
@@ -3798,6 +3798,11 @@ GameObject:
 --- !u!1 &8081780883472975794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8438245733088183482, guid: ca4378ab946de3445bb4ac5b11684601, type: 3}
+  m_PrefabInstance: {fileID: 374620300481807112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8183007587614421099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8411889737975673699, guid: ca4378ab946de3445bb4ac5b11684601, type: 3}
   m_PrefabInstance: {fileID: 374620300481807112}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &8210213498276956762 stripped
