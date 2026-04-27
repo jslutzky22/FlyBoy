@@ -85047,6 +85047,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 573697062435105452, guid: 408b4103f72a88e4ba347cd8a5c8983a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087086376814021497, guid: 408b4103f72a88e4ba347cd8a5c8983a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8462996736691717884, guid: 408b4103f72a88e4ba347cd8a5c8983a, type: 3}
       propertyPath: m_Name
       value: Blimpy
