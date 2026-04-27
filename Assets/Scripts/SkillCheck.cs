@@ -7,6 +7,7 @@ public class SkillCheck : MonoBehaviour
 {
     [SerializeField] private GameObject hitIndicator;
     [SerializeField] private GameObject successZone;
+    [SerializeField] private GameObject skillCheckUI;
     public bool skillCheckActive;
     private bool hit;
     private bool miss;
@@ -15,8 +16,9 @@ public class SkillCheck : MonoBehaviour
 
     public void SkillCheckActivate()
     {
-        hitIndicator.SetActive(true);
-        successZone.SetActive(true);
+        //hitIndicator.SetActive(true);
+        //successZone.SetActive(true);
+        skillCheckUI.SetActive(true);
         skillCheckActive = true;
         successZone.transform.eulerAngles = new Vector4(successZone.transform.eulerAngles.x, successZone.transform.eulerAngles.y, 
             Random.Range(120, 300), successZone.transform.rotation.w);
@@ -41,8 +43,9 @@ public class SkillCheck : MonoBehaviour
                 miss = false;
             }
         }
-        hitIndicator.SetActive(false);
-        successZone.SetActive(false);
+        //hitIndicator.SetActive(false);
+        //successZone.SetActive(false);
+        skillCheckUI.SetActive(false);
         hit = false;
         skillCheckHit = true;
         skillCheckActive = false;
