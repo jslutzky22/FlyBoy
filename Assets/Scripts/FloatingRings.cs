@@ -9,7 +9,12 @@ public class FloatingRings : MonoBehaviour
         if (other.name == "FlyBoy")
         {           
             FindFirstObjectByType<MasterSwatter>().floatingRing = true;
-            FindFirstObjectByType<Timer>().floatingRings = true;
+            int i = FindFirstObjectByType<HoopManager>().deliveryPoints.Length;
+            while (i > 0)
+            {
+                FindFirstObjectByType<HoopManager>().deliveryPoints[i - 1].GetComponent<DeliveryPointCollision>().floatingRings = true;
+                i--;
+            }
             hoop.SetActive(false);
         }
     }

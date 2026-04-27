@@ -19,7 +19,6 @@ public class Timer : MonoBehaviour
     [SerializeField] private int winIndex;
     [SerializeField] private int loseIndex;
     [SerializeField] private bool tutorialLevel;
-    [SerializeField] public bool floatingRings;
 
     private void Start()
     {
@@ -42,24 +41,6 @@ public class Timer : MonoBehaviour
             timerText.text = "0:00";
             SceneManager.LoadScene(loseIndex);
             return;
-        }
-
-        if (floatingRings && timeLimit.seconds <= 57)
-        {
-            timeLimit.seconds += 2;
-            floatingRings = false;
-        }
-        else if (floatingRings && timeLimit.seconds == 58)
-        {
-            timeLimit.seconds = 0;
-            timeLimit.minutes += 1;
-            floatingRings = false;
-        }
-        else if (floatingRings && timeLimit.seconds == 59)
-        {
-            timeLimit.seconds = 1;
-            timeLimit.minutes += 1;
-            floatingRings = false;
         }
 
         timeLimit.seconds -= Time.deltaTime;
