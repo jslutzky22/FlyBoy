@@ -36,6 +36,8 @@ public class FlyingController : MonoBehaviour
 
     public GameObject hitParticle;
     public GameObject moneyParticle;
+
+    public bool tutorial;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -138,6 +140,13 @@ public class FlyingController : MonoBehaviour
         }
     }
 
+    public void OnExitClick()
+    {
+        if (tutorial)
+        {
+            FindAnyObjectByType<Tutorial>().OnExitClick();
+        }
+    }
     private void MoveCharacterRight()
     {
         animator.SetBool("FlyingAnimation", true);
@@ -228,7 +237,8 @@ public class FlyingController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(hitParticle, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(hitParticle, transform.position, Quaternion.identity);
+        Destroy(effect, 3);
         audioSource.pitch = Random.Range(.80f, 1.20f);
         audioSource.PlayOneShot(bonk, Random.Range(0.50f, 1));
     }
