@@ -36,6 +36,8 @@ public class FlyingController : MonoBehaviour
 
     public GameObject hitParticle;
     public GameObject moneyParticle;
+
+    public bool tutorial;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -138,6 +140,13 @@ public class FlyingController : MonoBehaviour
         }
     }
 
+    public void OnExitClick()
+    {
+        if (tutorial)
+        {
+            FindAnyObjectByType<Tutorial>().OnExitClick();
+        }
+    }
     private void MoveCharacterRight()
     {
         animator.SetBool("FlyingAnimation", true);
