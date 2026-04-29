@@ -228,7 +228,8 @@ public class FlyingController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(hitParticle, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(hitParticle, transform.position, Quaternion.identity);
+        Destroy(effect, 3);
         audioSource.pitch = Random.Range(.80f, 1.20f);
         audioSource.PlayOneShot(bonk, Random.Range(0.50f, 1));
     }
