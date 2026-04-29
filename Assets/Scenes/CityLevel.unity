@@ -232163,7 +232163,7 @@ MonoBehaviour:
   maxDeliveryDelay: 45
   maxVisiblePoints: 4
   Money: 0
-  Rent: 450
+  Rent: 330
 --- !u!4 &2052315085
 Transform:
   m_ObjectHideFlags: 0
