@@ -842,7 +842,6 @@ MonoBehaviour:
   hitIndicator: {fileID: 2829660937888710399}
   successZone: {fileID: 8081780883472975794}
   skillCheckUI: {fileID: 8183007587614421099}
-  skillCheckActive: 0
   skillCheckHit: 0
   skillCheckSpinSpeed: 0
 --- !u!1 &2478199416684576140
@@ -2452,11 +2451,11 @@ RectTransform:
   - {fileID: 666552007934013321}
   - {fileID: 6064799483213714482}
   - {fileID: 3055290344614104503}
+  - {fileID: 7221870786689180015}
   - {fileID: 8831949192826665093}
   - {fileID: 1832090424898427875}
   - {fileID: 5531077354141630614}
   - {fileID: 2721762341152648721}
-  - {fileID: 7221870786689180015}
   - {fileID: 5163262773631220451}
   - {fileID: 4615361664797200836}
   - {fileID: 7356318370745566049}
@@ -2550,6 +2549,7 @@ MonoBehaviour:
   swatterText: {fileID: 2124888770216982864}
   pauseUI: {fileID: 7690754447646448609}
   tutorialLevel: 0
+  floatingRing: 0
   cityHealth: 0
   cityHealAmount: 0
   swatterPopUpLengthInSeconds: 10
