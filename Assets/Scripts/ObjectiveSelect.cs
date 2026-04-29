@@ -39,7 +39,7 @@ public class ObjectiveSelect : MonoBehaviour
 
     private void FlyVision(InputAction.CallbackContext obj)
     {
-        if (PauseScript.gamePaused)
+        if (PauseScript.gamePaused || SkillCheck.skillCheckActive)
         {
             return;
         }
@@ -59,7 +59,7 @@ public class ObjectiveSelect : MonoBehaviour
 
     private void FlyVisionInputCanceled(InputAction.CallbackContext obj)
     {
-        if (PauseScript.gamePaused)
+        if (PauseScript.gamePaused || SkillCheck.skillCheckActive)
         {
             return;
         }

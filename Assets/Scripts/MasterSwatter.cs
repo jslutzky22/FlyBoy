@@ -304,7 +304,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -379,7 +379,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -454,7 +454,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -529,7 +529,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -604,7 +604,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -679,7 +679,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -754,7 +754,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -829,7 +829,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -904,7 +904,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -979,7 +979,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -1054,7 +1054,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
@@ -1129,7 +1129,7 @@ public class MasterSwatter : MonoBehaviour
         {
             FindFirstObjectByType<FlyingController>().moveSpeed = 0;
             FindAnyObjectByType<SkillCheck>().SkillCheckActivate();
-            while (FindAnyObjectByType<SkillCheck>().skillCheckActive)
+            while (SkillCheck.skillCheckActive)
             {
                 yield return null;
             }
