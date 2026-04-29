@@ -13,6 +13,7 @@ public class DeliveryPointCollision : MonoBehaviour
     [SerializeField] private AudioClip moneySound;
     private ParticleSystem moneyParticles;
     [SerializeField] private TMP_Text moneyEstimate;
+    [SerializeField] public bool floatingRings;
 
     private void Start()
     {
@@ -83,6 +84,13 @@ public class DeliveryPointCollision : MonoBehaviour
         {
             timer -= Time.deltaTime;
             timerVisual.value = timer;
+
+            if (floatingRings)
+            {
+                timer += 2;
+                timerVisual.value = timer;
+                floatingRings = false;
+            }
 
             if (timer >= (2*timeLimit/3))
             {
