@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArrowPoint
   selectedObj: {fileID: 0}
   distanceText: {fileID: 1973644668194892789}
+  icon: {fileID: 8340322567378799634}
   greenMaterial: {fileID: 2100000, guid: cf0f785c4f262044c8d13b9d4162165e, type: 2}
   redMaterial: {fileID: -876546973899608171, guid: 4d600417f238b1544bdceca245be1f59, type: 3}
 --- !u!1 &401370666168390211
@@ -1710,10 +1711,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No objectives selected
+  m_text: "Use\tto select next objective"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6a3b9928c1ccdb0468dd87cbaacde3ef, type: 2}
+  m_sharedMaterial: {fileID: 1827355924071281682, guid: 6a3b9928c1ccdb0468dd87cbaacde3ef, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1941,6 +1942,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1163887623031249461}
+  - {fileID: 1597048091787874021}
   m_Father: {fileID: 5835963970087704419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2164,7 +2166,7 @@ Transform:
   m_GameObject: {fileID: 8200120884754558396}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09687134, y: 0.26046082, z: -0.026275566, w: 0.96025294}
-  m_LocalPosition: {x: 44.207542, y: 6.2245893, z: -126.43468}
+  m_LocalPosition: {x: 23.334232, y: 6.2245893, z: -153.74579}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2238,6 +2240,81 @@ Transform:
   - {fileID: 9050199197398155761}
   m_Father: {fileID: 3531987786013256094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8340322567378799634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1597048091787874021}
+  - component: {fileID: 3294791539183109067}
+  - component: {fileID: 2152657202117209961}
+  m_Layer: 5
+  m_Name: icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1597048091787874021
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340322567378799634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2786750622878642819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.83, y: -1.37}
+  m_SizeDelta: {x: 1.0133, y: 0.8651}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3294791539183109067
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340322567378799634}
+  m_CullTransparentMesh: 1
+--- !u!114 &2152657202117209961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340322567378799634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 816243ca3ee9d064a8beecb7441ba92d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8591020270848674631
 GameObject:
   m_ObjectHideFlags: 0
