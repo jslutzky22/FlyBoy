@@ -740,6 +740,7 @@ MonoBehaviour:
   money: {fileID: 8300000, guid: 4ab6ba2954dfbf14e85398d76404ca6a, type: 3}
   hitParticle: {fileID: 1712033212874380892, guid: 086216d2b9e52844c821dbaf4b5405c2, type: 3}
   moneyParticle: {fileID: 6849734353970219408, guid: db3111a592a39ba41bfbbced703ac126, type: 3}
+  tutorial: 0
 --- !u!114 &132359964518984979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,8 +936,8 @@ MonoBehaviour:
   visionFilter: {fileID: 0}
   reticle: {fileID: 0}
   reticleColor:
-    normal: {r: 1, g: 1, b: 1, a: 1}
-    selected: {r: 1, g: 0, b: 0, a: 1}
+    normal: {r: 1, g: 1, b: 1, a: 0.3137255}
+    selected: {r: 1, g: 0, b: 0, a: 0.3137255}
 --- !u!1 &2960176293645449672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,7 +2164,7 @@ Transform:
   m_GameObject: {fileID: 8200120884754558396}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09687134, y: 0.26046082, z: -0.026275566, w: 0.96025294}
-  m_LocalPosition: {x: 23.334232, y: 6.2245893, z: -153.74579}
+  m_LocalPosition: {x: 44.207542, y: 6.2245893, z: -126.43468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
