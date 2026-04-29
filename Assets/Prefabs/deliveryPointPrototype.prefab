@@ -143,8 +143,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0 ft
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6a3b9928c1ccdb0468dd87cbaacde3ef, type: 2}
+  m_sharedMaterial: {fileID: 1827355924071281682, guid: 6a3b9928c1ccdb0468dd87cbaacde3ef, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -348,6 +348,7 @@ MonoBehaviour:
   timerVisual: {fileID: 4401218284075953314}
   moneySound: {fileID: 8300000, guid: e01ced2409f1b824f9d24dc081ea7ac1, type: 3}
   moneyEstimate: {fileID: 4201162916667218132}
+  floatingRings: 0
 --- !u!1 &6199390907602596317
 GameObject:
   m_ObjectHideFlags: 0

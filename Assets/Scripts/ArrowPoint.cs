@@ -10,6 +10,7 @@ public class ArrowPoint : MonoBehaviour
     public TMP_Text distanceText;
     private Transform arrow;
     private MeshRenderer arrowMeshRenderer;
+    [SerializeField] private GameObject icon;
     [SerializeField] private Material greenMaterial;
     [SerializeField] private Material redMaterial;
 
@@ -43,13 +44,15 @@ public class ArrowPoint : MonoBehaviour
             arrowMeshRenderer.material = redMaterial;
         }
 
-            arrow.gameObject.SetActive(true);
+        arrow.gameObject.SetActive(true);
+        icon.gameObject.SetActive(false);
     }
 
     public void HideArrow()
     {
         selectedObj = null;
         arrow.gameObject.SetActive(false);
-        ArrowPoint.instance.distanceText.text = "No objective selected";
+        icon.gameObject.SetActive(true);
+        ArrowPoint.instance.distanceText.text = "Use\t to select next objective";
     }
 }
