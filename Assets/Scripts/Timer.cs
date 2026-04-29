@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
         if (timeLimit.minutes <= 0 && timeLimit.seconds <= 0)
         {
             timerText.text = "0:00";
-            SceneManager.LoadScene(loseIndex);
+            SceneManager.LoadScene("Lose");
             return;
         }
 
@@ -60,7 +60,7 @@ public class Timer : MonoBehaviour
     {
         if(PizzaDeliveryHandler.instance.Money >= PizzaDeliveryHandler.instance.Rent && !tutorialLevel)
         {
-            SceneManager.LoadScene(winIndex);
+            SceneManager.LoadScene("Win");
         }
     }
 }
