@@ -17,6 +17,7 @@ public class MasterSwatter : MonoBehaviour
     [SerializeField] TMP_Text swatterText;
     [SerializeField] GameObject pauseUI;
     [SerializeField] private bool tutorialLevel;
+    [SerializeField] public bool floatingRing;
 
     [Header("City Health")]
     public int cityHealth;
@@ -288,6 +289,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);   
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[0].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -358,6 +364,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[1].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -428,6 +439,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[2].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -498,6 +514,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[3].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -568,6 +589,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[4].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -638,6 +664,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[5].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -708,6 +739,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[6].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -778,6 +814,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[7].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -848,6 +889,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[8].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -918,6 +964,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[9].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -988,6 +1039,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[10].value = timer;
             while (pauseUI.activeSelf == true)
             {
@@ -1058,6 +1114,11 @@ public class MasterSwatter : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timer--;
+            if (floatingRing)
+            {
+                timer += 2;
+                floatingRing = false;
+            }
             eventTimerVisuals[11].value = timer;
             while (pauseUI.activeSelf == true)
             {

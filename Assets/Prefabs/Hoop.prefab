@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8400226754997769336}
   - component: {fileID: 4721679111358763557}
+  - component: {fileID: 4168340370911865139}
+  - component: {fileID: 8934415577988028710}
   m_Layer: 0
   m_Name: clockmiddle
   m_TagString: Untagged
@@ -91,6 +93,40 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!65 &4168340370911865139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3362905692889120520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000001, y: 10.000001, z: 0.20000012}
+  m_Center: {x: -0.000030517578, y: 0, z: -0.0000038146973}
+--- !u!114 &8934415577988028710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3362905692889120520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f512244ac5f528f408f3cb0af4c7df56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingRings
+  hoop: {fileID: 7690837717219351496}
 --- !u!1 &7690837717219351496
 GameObject:
   m_ObjectHideFlags: 0
