@@ -21,6 +21,7 @@ public class PauseScript : MonoBehaviour
 
         pauseUI = transform.GetChild(0).gameObject;
         pauseUI.SetActive(false);
+        gamePaused = false;
     }
 
     private void OnDestroy()
