@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CityLevel.unity
     guid: 7c90129512a9bf0479f49a5ac53fca16
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: fc3872e6ac42f244184492d17e62410d
+  - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: 387e3a4fc869b76469fe7018728c57aa
   - enabled: 1

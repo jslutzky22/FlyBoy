@@ -8,16 +8,22 @@ public class SkillCheck : MonoBehaviour
     [SerializeField] private GameObject hitIndicator;
     [SerializeField] private GameObject successZone;
     [SerializeField] private GameObject skillCheckUI;
-    public bool skillCheckActive;
+    public static bool skillCheckActive;
     private bool hit;
     private bool miss;
     public bool skillCheckHit;
     [SerializeField] private int skillCheckSpinSpeed;
 
+    private void Start()
+    {
+        skillCheckActive = false;
+    }
+
     public void SkillCheckActivate()
     {
         //hitIndicator.SetActive(true);
         //successZone.SetActive(true);
+        ObjectiveSelect.instance.FlyVisionCanceled();
         skillCheckUI.SetActive(true);
         skillCheckActive = true;
         successZone.transform.eulerAngles = new Vector4(successZone.transform.eulerAngles.x, successZone.transform.eulerAngles.y, 
@@ -30,14 +36,14 @@ public class SkillCheck : MonoBehaviour
     {
         while (!hit)
         {
-            yield return new WaitForSecondsRealtime(0.005f);
+            yield return new WaitForSeconds(0.005f);
             hitIndicator.transform.eulerAngles = new Vector4(hitIndicator.transform.eulerAngles.x, hitIndicator.transform.eulerAngles.y,
-                hitIndicator.transform.eulerAngles.z + skillCheckSpinSpeed * Time.unscaledDeltaTime, hitIndicator.transform.rotation.w);
+                hitIndicator.transform.eulerAngles.z + skillCheckSpinSpeed * Time.deltaTime, hitIndicator.transform.rotation.w);
             if (miss)
             {
                 hitIndicator.GetComponentInChildren<Image>().color = Color.red;
                 successZone.GetComponentInChildren<Image>().color = Color.red;
-                yield return new WaitForSecondsRealtime(1f);
+                yield return new WaitForSeconds(1f);
                 hitIndicator.GetComponentInChildren<Image>().color = Color.white;
                 successZone.GetComponentInChildren<Image>().color = Color.white;
                 miss = false;
@@ -53,6 +59,11 @@ public class SkillCheck : MonoBehaviour
 
     public void OnClick()
     {
+        if (PauseScript.gamePaused)
+        {
+            return;
+        }
+
         if (hitIndicator.transform.eulerAngles.z > successZone.transform.eulerAngles.z - 26 && 
             hitIndicator.transform.eulerAngles.z < successZone.transform.eulerAngles.z + 26 && skillCheckActive)
         {

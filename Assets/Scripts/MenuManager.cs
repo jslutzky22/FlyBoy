@@ -26,6 +26,6 @@ public class MenuManager : MonoBehaviour
 
     public void TutorialLevel()
     {
-        SceneManager.LoadScene("TutorialLevel");
+        SceneManager.LoadScene("Tutorial");
     }
 }
